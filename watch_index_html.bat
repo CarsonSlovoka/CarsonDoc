@@ -1,2 +1,2 @@
-cd build
+cd docs
 index.html
