@@ -78,11 +78,6 @@ pygments_style = 'sphinx'
 #
 # html_theme_options = {}
 
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
-
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 #
@@ -92,9 +87,22 @@ html_static_path = ['_static']
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
+html_sidebars = {'**': ['fulltoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html']}
+
+
 # ---sphinx-themes-----
-html_theme = 'sphinx_minoo_theme'
+html_theme = 'sphinx_minoo_theme'  # 會找尋html_theme_path資料夾下的html_theme
 import sphinx_minoo_theme
 html_theme_path = [sphinx_minoo_theme.get_html_theme_path()]  # 預設的路徑
 print(f'html_theme_path:{html_theme_path}')
 html_theme_path = ["_templates"]
+
+if 'Carson':
+    # Add any paths that contain custom static files (such as style sheets) here,
+    # relative to this directory. They are copied after the builtin static files,
+    # so a file named "default.css" will overwrite the builtin "default.css".
+    html_static_path = ['_static']
+
+    def setup(app):
+        app.add_stylesheet("css/Carson.css")
+        app.add_stylesheet("css/Page.css")
