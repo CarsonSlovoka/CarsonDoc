@@ -17,9 +17,9 @@ Sphinx Tutorial
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
+   :glob:
 
-   _src/basic
-   _src/admonition
+   _src/Sphinx/*
 
 
 
