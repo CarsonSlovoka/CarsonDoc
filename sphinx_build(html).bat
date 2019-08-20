@@ -5,3 +5,4 @@ cd docs
 RMDIR /s /q _sources
 index.html
 echo "finished"
+pause > nul
