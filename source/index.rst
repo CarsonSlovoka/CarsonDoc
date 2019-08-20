@@ -5,7 +5,6 @@ Carson Home
 .. sidebar:: Summary
 
     * :field-name:`Release:` 0.0.0
-    * :field-name:`Last updated:` |cur_date|
     * :field-name:`Authors:` |MainAuthor|
     * :field-name:`Target:` Sphinx Tutorial
     * :field-name:`Status:` 1

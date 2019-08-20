@@ -1,7 +1,72 @@
 Basic Specification
 =================================
 
-Paragraphs contain text and may contain inline markup: *emphasis*, **strong emphasis**, `interpreted text`, ``inline literals``, standalone hyperlinks (http://www.python.org), external hyperlinks (Python_), internal cross-references (example_), footnote references ([1]_), citation references ([CIT2002]_), substitution references (|example|), and _`inline internal targets`.
+.. sidebar:: Summary
+
+    * :field-name:`Release:` 0.0.0
+    * :field-name:`Last updated:` 2019/08/20
+    * :field-name:`Authors:` |MainAuthor|
+    * :field-name:`Target:` reformat
+    * :field-name:`Status:` 5
+
+Paragraphs
+--------------
+
+Paragraphs contain text and may contain inline markup.
+
+    * *emphasis*： ``*emphasis*``
+    * **strong emphasis**： ``**strong emphasis**``
+    * `interpreted text`： ```interpreted text```
+    * ``inline literals``： ````inline literals````
+    * standalone hyperlinks： http://www.python.org
+    * external hyperlinks： Python_ (``Python_``)
+    * internal cross-references： go_to_example_
+
+        .. _go_to_example:
+
+        The "_example" target above points to this paragraph.
+
+        syntax::
+
+            example_
+
+            .. _example:
+
+            The "_example" target above points to this paragraph.
+
+
+
+    * footnote references: [1]_ (``[1]_``)
+
+    * citation references: [CIT2002]_  (``[CIT2002]_``)
+
+    * substitution references: |replace demo|
+
+        .. |replace demo| replace:: Hello World!
+
+        syntax::
+
+            |replace demo|
+
+            .. |replace demo| replace:: Hello World!
+
+    * replace and link: |mathjax|_
+
+        .. |mathjax| replace:: mathjax demo
+        .. _mathjax: https://www.mathjax.org/#samples
+
+        syntax::
+
+            |mathjax|_
+
+            .. |mathjax| replace:: mathjax demo
+            .. _mathjax: https://www.mathjax.org/#samples
+
+    * function: ``py:function:: def start(file):``
+
+        .. py:function:: def start(file):
+
+
 
 
 List
@@ -20,7 +85,7 @@ Enumerated lists:
 
 1. This is an enumerated list.
 
-2. Enumerators may be arabic numbers, letters, or roman
+#. Enumerators may be arabic numbers, letters, or roman
    numerals.
 
 Definition lists:
@@ -47,25 +112,29 @@ Field lists:
       The field body may contain one or more body elements,
       indented relative to the field marker.
 
-Option lists, for listing command-line options:
+Option lists
 ``````````````````````````````````````````````````````````
 
--a            command-line option "a"
--b file       options can have arguments
-              and long descriptions
---long        options can be long also
---input=file  long options can also have
-              arguments
-/V            DOS/VMS-style options too
+    for listing command-line options:
+
+        -a            command-line option "a"
+        -b file       options can have arguments
+                      and long descriptions
+        --long        options can be long also
+        --input=file  long options can also have
+                      arguments
+        /V            DOS/VMS-style options too
 
 
 Literal blocks:
 -------------------
 
-    if literal_block:
-        text = 'is left as-is'
-        spaces_and_linebreaks = 'are preserved'
-        markup_processing = None
+    ::
+
+        if literal_block:
+            text = 'is left as-is'
+            spaces_and_linebreaks = 'are preserved'
+            markup_processing = None
 
 
 Block quotes:
@@ -76,15 +145,68 @@ Block quotes:
     -- Anne Elk (Miss)
 
 
-Simple Table
+Table
 -----------------
 
-====================  ==========  ==========
-Header row, column 1  Header 2    Header 3
-====================  ==========  ==========
-body row 1, column 1  column 2    column 3
-body row 2            Cells may span columns
-====================  ======================
+quickly create table: `online table editor <https://truben.no/table/>`_
+
+Simple
+`````````
+
+    ====================  ==========  ==========
+    Header row, column 1  Header 2    Header 3
+    ====================  ==========  ==========
+    body row 1, column 1  column 2    column 3
+    body row 2            Cells may span columns
+    ====================  ======================
+
+    syntax::
+
+            ====================  ==========  ==========
+            Header row, column 1  Header 2    Header 3
+            ====================  ==========  ==========
+            body row 1, column 1  column 2    column 3
+            body row 2            Cells may span columns
+            ====================  ======================
+
+
+tradition
+````````````
+
+    +-----------------------------+-----------+---------+
+    | Description                 | 1 month   | 6 month |
+    +=============================+===========+=========+
+    | money back                  |     X     |   V     |
+    +-----------------------------+-----------+---------+
+    | M                           |     5     |   10    |
+    |                             |           |         |
+    | O                           |           |         |
+    |                             |           |         |
+    | N                           |           |         |
+    |                             |           |         |
+    | E                           |           |         |
+    |                             |           |         |
+    | Y                           |           |         |
+    +-----------------------------+-----------+---------+
+
+    syntax::
+
+            +-----------------------------+-----------+---------+
+            | Description                 | 1 month   | 6 month |
+            +=============================+===========+=========+
+            | money back                  |     X     |   V     |
+            +-----------------------------+-----------+---------+
+            | M                           |     5     |   10    |
+            |                             |           |         |
+            | O                           |           |         |
+            |                             |           |         |
+            | N                           |           |         |
+            |                             |           |         |
+            | E                           |           |         |
+            |                             |           |         |
+            | Y                           |           |         |
+            +-----------------------------+-----------+---------+
+
 
 Citation
 ------------
@@ -96,9 +218,3 @@ Citation
    textual.
 
 .. _Python: http://www.python.org
-
-.. |example| function:: module=xml.xslt class=Processor
-
-.. _example:
-
-The "_example" target above points to this paragraph.
