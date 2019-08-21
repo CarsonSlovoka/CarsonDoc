@@ -1,5 +1,7 @@
 .. _linking-Sphinx.Install:
 
+.. include:: ../../_templates/CSS_DECLARE/color.dc_css
+
 Install
 =================================
 

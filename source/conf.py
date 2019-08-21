@@ -91,12 +91,12 @@ pygments_style = 'sphinx'
 html_sidebars = {'**': ['fulltoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html']}
 
 # ---sphinx-themes-----
-html_theme = 'sphinx_minoo_theme'  # 會找尋html_theme_path資料夾下的html_theme
+html_theme = 'sphinx_minoo_theme'  # that will find "html_theme_path/html_theme". i.e. _templates/sphinx_minoo_theme
 import sphinx_minoo_theme
 
-html_theme_path = [sphinx_minoo_theme.get_html_theme_path()]  # 預設的路徑
+html_theme_path = [sphinx_minoo_theme.get_html_theme_path()]  # default path
 # print(f'html_theme_path:{html_theme_path}')
-html_theme_path = ["_templates"]
+html_theme_path = ["_templates"]  # from {default_path} copy to ./_templates/{html_theme}
 
 if 'Carson':
     # Add any paths that contain custom static files (such as style sheets) here,

@@ -53,7 +53,7 @@
         line-height: 1em;
         transition: background-color .6s;
 
-        box-shadow: 1.5px 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;  /* 加上陰影 */
+        box-shadow: 1.5px 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;  /* add shadow */
     }
 
 /* code */

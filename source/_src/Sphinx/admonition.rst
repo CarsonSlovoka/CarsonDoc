@@ -92,3 +92,10 @@ define your style
 
             def setup(app):
                 app.add_stylesheet("css/Page.css")
+        * use::
+
+            .. admonition:: section
+
+                title
+
+                    text
