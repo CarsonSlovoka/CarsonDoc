@@ -24,3 +24,14 @@ div.admonition-section > p.admonition-title + p {
 div.admonition-section > p {
     display: block;
 }
+
+.toctree-wrapper.compound > p.caption {
+    font-size: 28px;
+    font-style: italic;
+}
+
+div#sidebar-bottom-list > div#tree-toc > p.caption {
+    font-size: 24px;
+    background-color: yellow;
+    margin: auto;
+}

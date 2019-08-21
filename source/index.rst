@@ -1,3 +1,5 @@
+.. include:: _templates/CSS_DECLARE/color.dc_css
+
 ==================================================
 Carson Home
 ==================================================
@@ -9,18 +11,25 @@ Carson Home
     * :field-name:`Target:` Sphinx Tutorial
     * :field-name:`Status:` 1
 
-
-
-Sphinx Tutorial
-=================
+Article
+============
 
 .. toctree::
    :maxdepth: 3
-   :caption: Contents:
+   :caption: Sphinx Tutorial
+
+   _src/Sphinx/install
+   _src/Sphinx/basic
+   _src/Sphinx/admonition
+
+----
+
+.. toctree::
+   :maxdepth: 3
+   :caption: GitHub
    :glob:
 
-   _src/Sphinx/*
-
+   _src/GitHub/*
 
 
 Indices and tables
