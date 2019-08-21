@@ -1,37 +1,48 @@
-div.admonition-section {
-    margin-bottom: 20px;
-    padding: 18px;
-    border: 1px dashed #999;
-    overflow-y: auto;
-    overflow-x: auto;
-}
+
+/*
+=====================
+admonition-section
+=====================
+*/
+    div.admonition-section {
+        margin-bottom: 20px;
+        padding: 18px;
+        border: 1px dashed #999;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
 
 
-/* hidden title */
-div.admonition-section > p.admonition-title {
-    color: transparent;
-    line-height: 0em;
-}
+    /* hidden title */
+    div.admonition-section > p.admonition-title {
+        color: transparent;
+        line-height: 0em;
+    }
 
-/* title + p -> bold */
-div.admonition-section > p.admonition-title + p {
-    font-weight: bold;
-    font-size: 120%;
-    margin: 6px;
-}
+    /* title + p -> bold */
+    div.admonition-section > p.admonition-title + p {
+        font-weight: bold;
+        font-size: 120%;
+        margin: 6px;
+    }
 
-/* new line after ":"*/
-div.admonition-section > p {
-    display: block;
-}
+    /* new line after ":"*/
+    div.admonition-section > p {
+        display: block;
+    }
 
-.toctree-wrapper.compound > p.caption {
-    font-size: 28px;
-    font-style: italic;
-}
+/*
+=====================
+toctree caption
+=====================
+*/
+    .toctree-wrapper.compound > p.caption {
+        font-size: 28px;
+        font-style: italic;
+    }
 
-div#sidebar-bottom-list > div#tree-toc > p.caption {
-    font-size: 24px;
-    background-color: yellow;
-    margin: auto;
-}
+    div#sidebar-bottom-list > div#tree-toc > p.caption {
+        font-size: 24px;
+        background-color: yellow;
+        margin: auto;
+    }
