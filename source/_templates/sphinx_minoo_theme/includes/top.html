@@ -10,6 +10,7 @@
         <a><i class="fa fa-folder-open-o"></i>&nbsp; {{ title }}</a>
     {% else %}
         <a><i class="fa fa-folder-o"></i>&nbsp; {{glossary.root_page}}</a>
+        <a href={{ theme_github_homepage|e }} class="top-src" target="_blank"><i class="fa fa-github-square" style="font-size:23px;"></i></a>
     {% endif %}
     {% if pagename != "search" %}
         {% if display_github %}
