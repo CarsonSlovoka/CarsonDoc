@@ -35,6 +35,7 @@ Install
                 + conf.py::
 
                     extensions.append('sphinxcontrib.plantuml')
+                    plantuml = 'java -jar {0}'.format(os.path.join(os.environ["USERPROFILE"], 'plantuml.jar'))
 
             + dot.exe: `donwload graphviz <https://graphviz.gitlab.io/_pages/Download/Download_windows.html>`_
                 + set env path: ``C:../graphviz-2.38/release/bin``
