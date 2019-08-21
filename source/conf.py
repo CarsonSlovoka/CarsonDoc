@@ -35,6 +35,8 @@ release = '0.0.0'
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.githubpages',
+    'sphinx.ext.mathjax',
+    'sphinxcontrib.plantuml',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -117,3 +119,5 @@ if 'Carson':
         # print(rst_epilog)
 
     html_show_sourcelink = False  # Close the page will have the function of linking to the original rst file.
+
+    plantuml = 'java -jar {0}'.format(os.path.join(os.environ["USERPROFILE"], 'plantuml.jar'))
