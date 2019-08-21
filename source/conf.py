@@ -93,7 +93,7 @@ html_theme = 'sphinx_minoo_theme'  # 會找尋html_theme_path資料夾下的html
 import sphinx_minoo_theme
 
 html_theme_path = [sphinx_minoo_theme.get_html_theme_path()]  # 預設的路徑
-print(f'html_theme_path:{html_theme_path}')
+# print(f'html_theme_path:{html_theme_path}')
 html_theme_path = ["_templates"]
 
 if 'Carson':
@@ -114,6 +114,6 @@ if 'Carson':
                          f'.. include:: {os.path.dirname(__file__)}/_templates/CSS_DECLARE/color.dc_css',
                          ]
         rst_epilog = '\n'.join(variable_list) + '\n'
-        print(rst_epilog)
+        # print(rst_epilog)
 
     html_show_sourcelink = False  # Close the page will have the function of linking to the original rst file.

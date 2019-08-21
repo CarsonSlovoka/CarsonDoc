@@ -1,1 +1,26 @@
-.red {color:#aa0060; font-weight:bold;}
+div.admonition-section {
+    margin-bottom: 20px;
+    padding: 18px;
+    border: 1px dashed #999;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+
+/* hidden title */
+div.admonition-section > p.admonition-title {
+    color: transparent;
+    line-height: 0em;
+}
+
+/* title + p -> bold */
+div.admonition-section > p.admonition-title + p {
+    font-weight: bold;
+    font-size: 120%;
+    margin: 6px;
+}
+
+/* new line after ":"*/
+div.admonition-section > p {
+    display: block;
+}

@@ -1,3 +1,5 @@
+.. _linking-Sphinx.Basic:
+
 Basic Specification
 =================================
 
@@ -65,6 +67,20 @@ Paragraphs contain text and may contain inline markup.
     * function: ``py:function:: def start(file):``
 
         .. py:function:: def start(file):
+
+define your style
+````````````````````````````
+
+    * declare css at ``source\_templates\CSS_DECLARE\{my.css}`` ::
+
+        .. role:: yellow
+
+    * conf.py::
+
+        rst_epilog += f'.. include:: {os.path.dirname(__file__)}/_templates/CSS_DECLARE/my.css' + '\n'
+
+    * use it: :blue:`blue color` (``:blue:`blue color```)
+
 
 
 
