@@ -26,6 +26,5 @@ Sphinx Tutorial
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
+* :ref:`linking-amend_history`
 * :ref:`search`

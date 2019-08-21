@@ -46,5 +46,5 @@ Install
 Start
 ^^^^^^^^^^
 
-    * cd {your_work_dir}
+    * cd {work_dir}
     * sphinx-quickstart {work_dir}
