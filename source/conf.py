@@ -77,7 +77,7 @@ pygments_style = 'sphinx'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {"style_nav_header_background": "#000000bd"}
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -88,13 +88,15 @@ pygments_style = 'sphinx'
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
-html_sidebars = {'**': ['fulltoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html']}
 
 # ---sphinx-themes-----
-html_theme = 'sphinx_minoo_theme'  # that will find "html_theme_path/html_theme". i.e. _templates/sphinx_minoo_theme
-import sphinx_minoo_theme
+html_theme = 'sphinx_rtd_theme'  # that will find "html_theme_path/html_theme". i.e. _templates/sphinx_minoo_theme
+# import sphinx_minoo_theme
 
-html_theme_path = [sphinx_minoo_theme.get_html_theme_path()]  # default path
+import sphinx_rtd_theme
+extensions.append("sphinx_rtd_theme")
+
+# html_theme_path = [sphinx_minoo_theme.get_html_theme_path()]  # default path
 # print(f'html_theme_path:{html_theme_path}')
 html_theme_path = ["_templates"]  # from {default_path} copy to ./_templates/{html_theme}
 
@@ -107,7 +109,8 @@ if 'Carson':
 
     def setup(app):
         app.add_stylesheet("css/Carson.css")
-        app.add_stylesheet("css/Page.css")
+        # app.add_stylesheet("css/themes/minoo.Page.css")
+        app.add_stylesheet("css/themes/rtd.Page.css")
 
 
     if 'global variable setting':
