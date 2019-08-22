@@ -111,10 +111,15 @@
         <div class="wy-side-nav-search" {% if theme_style_nav_header_background %} style="background: {{theme_style_nav_header_background}}" {% endif %}>
           {% block sidebartitle %}
 
+          <div id="sidebar-top-image">
+            <span style="background-image: url('{{ pathto('_static/avatar.jpg', 1) }}');"></span>
+          </div>
+
           {% if logo and theme_logo_only %}
             <a href="{{ pathto(master_doc) }}">
           {% else %}
-            <a href="{{ pathto(master_doc) }}" class="icon icon-home"> {{ project }}
+            <!-- <a href="{{ pathto(master_doc) }}" class="icon icon-home"> {{ project }} -->
+              <a href="{{ pathto(master_doc) }}"> {{ project }}
           {% endif %}
 
           {% if logo %}
@@ -136,6 +141,12 @@
               </div>
             {% endif %}
           {% endif %}
+
+          <div>
+            <span style="background-image: url('{{ pathto('_static/avatar.jpg', 1) }}');"></span>
+            <a class="sidebar-icon-link" href={{ theme_github_homepage|e }} target="_blank"><i class="icon icon-home" style="font-size:23px;"></i></a>
+            <a class="sidebar-icon-link" href={{ theme_github|e }} target="_blank"><i class="fa fa-github-square" style="font-size:23px;"></i></a>
+          </div>
 
           {% include "searchbox.html" %}
 

@@ -1,9 +1,24 @@
 /*
 */
-.wy-nav-content {
-    max-width: 1296px;
-}
+    .wy-nav-content {
+        max-width: 1000px;
+    }
 
+/*
+avatar.jpg
+*/
+    #sidebar-top-image>span {
+        width: 86px;
+        height: 86px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 4px solid #E8EAF6;
+        display: inline-block;
+        margin-top: 5px;
+        -webkit-box-shadow: 0 0 0 1px rgba(232,234,246,1);
+        -moz-box-shadow: 0 0 0 1px rgba(232,234,246,1);
+        box-shadow: 0 0 0 1px rgba(232,234,246,1);
+    }
 
 /*
 =====================

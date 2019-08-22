@@ -77,7 +77,7 @@ pygments_style = 'sphinx'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-html_theme_options = {"style_nav_header_background": "#5C6BC0"}
+html_theme_options = {"style_nav_header_background": "#000000bd"}
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
