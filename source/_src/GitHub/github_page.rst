@@ -14,10 +14,10 @@ GitHub Page
     * :field-name:`Status:` 1
 
 
-    * Free domain
-        * DNS
-    * Web hosing
-    * https
+* Free domain
+    * DNS
+* Web hosing
+* https
 
 
 root & child nodes
@@ -29,8 +29,7 @@ root & child nodes
 
         .. note:: private: Upgrade to GitHub Pro or make this repository public to enable Wikis. ($7.00 / month)
 
-    2. design by yourself or find your favorite theme in { `sphinx themes <https://sphinx-themes.org/>`_ , `jekyllthemes <http://jekyllthemes.org/>`_ } and apply them
-
+    #. design by yourself or find your favorite theme in { `sphinx themes <https://sphinx-themes.org/>`_ , `jekyllthemes <http://jekyllthemes.org/>`_ } and apply them
         * Select source:
             * master branch
             * master branch /docs folder

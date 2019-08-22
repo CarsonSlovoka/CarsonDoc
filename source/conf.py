@@ -88,13 +88,15 @@ pygments_style = 'sphinx'
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
-html_sidebars = {'**': ['fulltoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html']}
 
 # ---sphinx-themes-----
-html_theme = 'sphinx_minoo_theme'  # that will find "html_theme_path/html_theme". i.e. _templates/sphinx_minoo_theme
-import sphinx_minoo_theme
+html_theme = 'sphinx_rtd_theme'  # that will find "html_theme_path/html_theme". i.e. _templates/sphinx_minoo_theme
+# import sphinx_minoo_theme
 
-html_theme_path = [sphinx_minoo_theme.get_html_theme_path()]  # default path
+import sphinx_rtd_theme
+extensions.append("sphinx_rtd_theme")
+
+# html_theme_path = [sphinx_minoo_theme.get_html_theme_path()]  # default path
 # print(f'html_theme_path:{html_theme_path}')
 html_theme_path = ["_templates"]  # from {default_path} copy to ./_templates/{html_theme}
 
