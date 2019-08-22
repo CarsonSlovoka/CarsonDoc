@@ -6,9 +6,10 @@ Carson Home
 
 .. sidebar:: Summary
 
-    * :field-name:`Release:` 0.0.0
+    * :field-name:`Release:` 0.1.0
+    * :field-name:`Last updated:` 2019/08/22
     * :field-name:`Authors:` |MainAuthor|
-    * :field-name:`Target:` Sphinx Tutorial
+    * :field-name:`Target:` Git
     * :field-name:`Status:` 1
 
 Article
@@ -31,6 +32,14 @@ Article
 
    _src/GitHub/*
 
+----
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Git
+   :glob:
+
+   _src/Git/*
 
 Indices and tables
 ==================
