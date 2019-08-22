@@ -77,7 +77,7 @@ pygments_style = 'sphinx'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {"style_nav_header_background": "#5C6BC0"}
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -109,7 +109,8 @@ if 'Carson':
 
     def setup(app):
         app.add_stylesheet("css/Carson.css")
-        app.add_stylesheet("css/Page.css")
+        # app.add_stylesheet("css/themes/minoo.Page.css")
+        app.add_stylesheet("css/themes/rtd.Page.css")
 
 
     if 'global variable setting':
