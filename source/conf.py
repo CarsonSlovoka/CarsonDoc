@@ -124,3 +124,7 @@ if 'Carson':
     html_show_sourcelink = False  # Close the page will have the function of linking to the original rst file.
 
     plantuml = 'java -jar {0}'.format(os.path.join(os.environ["USERPROFILE"], 'plantuml.jar'))
+
+    if 'localization':
+        locale_dirs = ['locale/']  # path is example but recommended.
+        gettext_compact = False  # optional.
