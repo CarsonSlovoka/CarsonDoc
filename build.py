@@ -19,6 +19,7 @@ How to run this script?
 from stdafx import show_current_job_at_console  # just like the regular print function but decorated with special text.  (It's not necessary)
 from subprocess import Popen, PIPE, DEVNULL
 from os import scandir, path, startfile
+import configparser  # https://docs.python.org/3/library/configparser.html
 
 
 def show_job(job_desc, align='center', flag='*', flag_len=60):
@@ -105,15 +106,16 @@ def sphinx_build_html(args):
 
         # sphinx-build -b html source docs/en  -D language=zh_TW
         user_response = input('rebuild (Y/N)?')
-        cmd_list = ["sphinx-build"]
+        cmd_list = ["sphinx-build.exe"]
         if user_response.upper() == 'Y':
             cmd_list.append("-E")
         cmd_list.extend(['-b', 'html',
                          src_dir, f"{out_dir}/{response_lang}",
                          '-D', f"language={response_lang}"])
-
+        print(f"run command:  {' '.join(cmd_list)}")
         print(run_cmd_command(cmd_list))
         startfile(path.abspath(f'{out_dir}/{response_lang}/index.html'))
+        input('Please press any key to continue...')
 
 
 def main():
@@ -161,5 +163,16 @@ if __name__ == '__main__':
     arg_parser.add_argument("--src_dir", help="source ('source' is example but recommended)", dest="src_dir", default='source')
     arg_parser.add_argument("--out_dir", help="docs (if you are using GitHub Page, I strongly recommend you use docs.)", dest="out_dir", default='docs')
     arg_parser.add_argument("--locale_dirs", help="locale/  (it must same with variable locale_dirs that from conf.py)", dest="locale_dirs", default='locale/')
+    arg_parser.add_argument("--config_file", help="build.ini (if you provide this file, then all of the other settings will be ignored)",
+                            dest="config_file", default=None)
     args = arg_parser.parse_args()
+    if args.config_file:
+        config_file = path.abspath(args.config_file)
+        assert path.exists(args.config_file), f'{config_file} are not exists!'
+        config = configparser.ConfigParser()
+        config.read(config_file)
+        args.src_dir = config['PATH']['source']
+        args.out_dir = config['PATH']['out_dir']
+        args.locale_dirs = config['PATH']['locale_dirs']
+        args.lang = config['LANGUAGE']['lang']
     main()
