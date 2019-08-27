@@ -1,5 +1,7 @@
 .. _linking-Sphinx.Basic:
 
+.. include:: ../../_templates/CSS_DECLARE/color.dc_css
+
 Basic Specification
 =================================
 
@@ -21,7 +23,16 @@ Paragraphs contain text and may contain inline markup.
     * `interpreted text`： ```interpreted text```
     * ``inline literals``： ````inline literals````
     * standalone hyperlinks： http://www.python.org
-    * external hyperlinks： Python_ (``Python_``)
+    * external hyperlinks： Python_
+
+        .. _Python: http://www.python.org
+
+        demoe:
+
+            click me link to Python_
+
+            click me link to `google <https://www.google.com.tw/>`_
+
     * internal cross-references： go_to_example_
 
         .. _go_to_example:
@@ -233,4 +244,3 @@ Citation
 .. [CIT2002] Just like a footnote, except the label is
    textual.
 
-.. _Python: http://www.python.org

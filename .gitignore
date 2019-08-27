@@ -1,3 +1,6 @@
 docs/
 .idea/
 *.DS_Store
+
+# .mo is compiled from "sphinx-build -b html source docs/zh-tw  -D language=zh_TW"
+*.mo
