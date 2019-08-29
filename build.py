@@ -19,6 +19,7 @@ How to run this script?
 from stdafx import show_current_job_at_console  # just like the regular print function but decorated with special text.  (It's not necessary)
 from subprocess import Popen, PIPE, DEVNULL
 from os import scandir, path, startfile
+from shutil import rmtree
 import configparser  # https://docs.python.org/3/library/configparser.html
 
 
@@ -115,7 +116,10 @@ def sphinx_build_html(args):
                          '-D', f"language={response_lang}"])
         print(f"run command:  {' '.join(cmd_list)}")
         print(run_cmd_command(cmd_list))
-        startfile(path.abspath(f'{out_dir}/{response_lang}/index.html'))
+        out_path = path.abspath(f'{out_dir}/{response_lang}')
+        startfile(path.join(out_path, 'index.html'))
+        if path.exists(path.join(out_path, '_sources')):
+            rmtree(path.abspath(f'{out_dir}/{response_lang}/_sources'))
         input('Please press any key to continue...')
 
 
