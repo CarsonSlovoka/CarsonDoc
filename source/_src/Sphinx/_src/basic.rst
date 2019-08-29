@@ -1,6 +1,6 @@
 .. _linking-Sphinx.Basic:
 
-.. include:: ../../_templates/CSS_DECLARE/color.dc_css
+.. include:: ../../../_templates/CSS_DECLARE/color.dc_css
 
 Basic Specification
 =================================
@@ -234,6 +234,7 @@ tradition
             | Y                           |           |         |
             +-----------------------------+-----------+---------+
 
+----
 
 Citation
 ------------

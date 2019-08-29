@@ -20,29 +20,23 @@ Article
 
 .. toctree::
    :maxdepth: 3
-   :caption: Sphinx Tutorial
 
-   _src/Sphinx/install
-   _src/Sphinx/basic
-   _src/Sphinx/admonition
+   _src/Sphinx/Sphinx.index.rst
 
 ----
 
 .. toctree::
    :maxdepth: 3
-   :caption: GitHub
    :glob:
 
-   _src/GitHub/*
+   _src/GitHub/GitHub.index.rst
 
 ----
 
 .. toctree::
    :maxdepth: 3
-   :caption: Git
-   :glob:
 
-   _src/Git/*
+   _src/Git/Git.index.rst
 
 ----
 

@@ -1,6 +1,6 @@
 .. _linking-Sphinx.Admonitions:
 
-.. include:: ../../_templates/CSS_DECLARE/color.dc_css
+.. include:: ../../../_templates/CSS_DECLARE/color.dc_css
 
 Admonitions
 =====================

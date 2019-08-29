@@ -1,8 +1,8 @@
 .. _linking-GitHub.git_tutorial:
 
-.. include:: ../../_templates/CSS_DECLARE/color.dc_css
+.. include:: ../../../_templates/CSS_DECLARE/color.dc_css
 
-Git Tutorial
+Tutorial
 =================================
 
 .. sidebar:: Summary

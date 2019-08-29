@@ -1,6 +1,6 @@
 .. _linking-GitHub.github_page:
 
-.. include:: ../../_templates/CSS_DECLARE/color.dc_css
+.. include:: ../../../_templates/CSS_DECLARE/color.dc_css
 
 GitHub Page
 =================================
