@@ -1,15 +1,18 @@
 .. include:: _templates/CSS_DECLARE/color.dc_css
 
+.. _linking.ROOT:
+.. :ref:`ROOT PAGE <linking.ROOT>`
+
 ==================================================
 Carson Home
 ==================================================
 
 .. sidebar:: Summary
 
-    * :field-name:`Release:` 0.1.0
-    * :field-name:`Last updated:` 2019/08/22
+    * :field-name:`Release:` 1.0.0
+    * :field-name:`Last updated:` 2019/08/28
     * :field-name:`Authors:` |MainAuthor|
-    * :field-name:`Target:` Git
+    * :field-name:`Target:` Web
     * :field-name:`Status:` 1
 
 Article
@@ -40,6 +43,15 @@ Article
    :glob:
 
    _src/Git/*
+
+----
+
+.. toctree::
+   :maxdepth: 3
+
+   _src/Web/web.index.rst
+
+----
 
 Indices and tables
 ==================
