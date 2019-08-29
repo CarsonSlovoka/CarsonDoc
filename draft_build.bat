@@ -4,7 +4,7 @@ REM %APPDATA%\Local\Programs\Python\Python37\Scripts\sphinx-build.exe -b html so
 
 Set /p "rebuild_flag=rebuild?(Y/N)"
 
-if %rebuild_flag% == Y (
+if "%rebuild_flag%" == "Y" (
 	echo sphinx-build -E -b html source docs/temp
 	sphinx-build -E -b html source docs/temp
 ) else (

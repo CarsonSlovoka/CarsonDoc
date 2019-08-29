@@ -59,6 +59,10 @@ def get_text(src_dir, out_dir):
 @show_job('available language list:', align='left', flag='-', flag_len=30)
 def show_language_list(src_dir, local_dirs):
     locale_dirs = path.abspath(path.join(src_dir, local_dirs))
+    if not path.exists(locale_dirs):
+        print(f'File Not Found Error: {locale_dirs}')
+        return []
+
     language_list = []
     for cur_dir_path in [entry.path for entry in scandir(locale_dirs) if entry.is_dir(follow_symlinks=False)]:
         lang = path.basename(cur_dir_path)
@@ -69,15 +73,20 @@ def show_language_list(src_dir, local_dirs):
 
 
 @show_job('create .po: from _gettext/*.pot to source/locale/*.po')
-def get_po_file(out_dir, lang_list):
+def get_po_file(locale_dir, lang_list):
     """
     REM sphinx-intl update -p _gettext  # If the language directory already exists, just using this command!
     sphinx-intl update -p _gettext -l zh_TW -l en -l zh-CN
     REM sphinx-intl update -p _gettext -l en  It't ok {-l multiple language}
     """
-    if lang_list == "":
+
+    if lang_list == "" and path.exists(locale_dir):
         print(run_cmd_command(["sphinx-intl", 'update', '-p', f"_gettext"]))
         input('Please press any key to continue...')
+        return
+
+    if lang_list == "":
+        print('Language folder is empty. You must select a language before initial.')
         return
 
     for cur_lang in lang_list.split(','):
@@ -133,7 +142,7 @@ def main():
         0: ('Exit script', lambda: exit(0)),
         1: (get_text.__name__, lambda: get_text(args.src_dir, args.out_dir)),
         2: (show_language_list.__name__, lambda: show_language_list(args.src_dir, args.locale_dirs)),
-        3: (get_po_file.__name__, lambda: get_po_file(args.out_dir, args.lang)),
+        3: (get_po_file.__name__, lambda: get_po_file(path.abspath(path.join(args.src_dir, args.locale_dirs)), args.lang)),
         4: (sphinx_build_html.__name__, lambda: sphinx_build_html(args)),
         99: (run_all_process.__name__, lambda: run_all_process(args)),  # this command (that run all procedure) usually used for the first building
     }
