@@ -2,5 +2,8 @@ docs/
 .idea/
 *.DS_Store
 
+# .pot files from sphinx-build source gettext -b gettext. it doesn't matter just make sure .po files exists is more than enough.
+_gettext/
+
 # .mo is compiled from "sphinx-build -b html source docs/zh-tw  -D language=zh_TW"
 *.mo

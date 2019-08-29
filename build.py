@@ -49,8 +49,8 @@ def run_cmd_command(cmd_list):
 
 @show_job('create .pot: get all text from source/*.rst')
 def get_text(src_dir, out_dir):
-    # sphinx-build source docs/gettext -b gettext
-    print(run_cmd_command(["sphinx-build", src_dir, f"{out_dir}/gettext",
+    # sphinx-build source gettext -b gettext
+    print(run_cmd_command(["sphinx-build", src_dir, f"_gettext",
                            "-b", "gettext"]))
     input('Please press any key to continue...')
 
@@ -67,19 +67,20 @@ def show_language_list(src_dir, local_dirs):
     return language_list
 
 
-@show_job('create .po: from out_dir/gettext/*.pot to source/locale/*.po')
+@show_job('create .po: from _gettext/*.pot to source/locale/*.po')
 def get_po_file(out_dir, lang_list):
     """
-    REM sphinx-intl update -p docs/gettext  # If the language directory already exists, just using this command!
-    sphinx-intl update -p docs/gettext -l zh_TW -l en -l zh-CN
-    REM sphinx-intl update -p docs/gettext -l en  It't ok {-l multiple language}
+    REM sphinx-intl update -p _gettext  # If the language directory already exists, just using this command!
+    sphinx-intl update -p _gettext -l zh_TW -l en -l zh-CN
+    REM sphinx-intl update -p _gettext -l en  It't ok {-l multiple language}
     """
-    if lang_list is None:
-        print(run_cmd_command(["sphinx-intl", 'update', '-p', f"{out_dir}/gettext"]))
+    if lang_list == "":
+        print(run_cmd_command(["sphinx-intl", 'update', '-p', f"_gettext"]))
+        input('Please press any key to continue...')
         return
 
     for cur_lang in lang_list.split(','):
-        print(run_cmd_command(["sphinx-intl", 'update', '-p', f"{out_dir}/gettext",
+        print(run_cmd_command(["sphinx-intl", 'update', '-p', f"_gettext",
                                '-l', cur_lang]))
     input('Please press any key to continue...')
 
@@ -159,7 +160,7 @@ if __name__ == '__main__':
 
     arg_parser = ArgumentParser()
     arg_parser.add_argument("-l", "--language", help="en,zh_TW... (LEARN MORE > http://www.sphinx-doc.org/en/master/usage/configuration.html)",
-                            dest="lang", default=None)
+                            dest="lang", default="")
     arg_parser.add_argument("--src_dir", help="source ('source' is example but recommended)", dest="src_dir", default='source')
     arg_parser.add_argument("--out_dir", help="docs (if you are using GitHub Page, I strongly recommend you use docs.)", dest="out_dir", default='docs')
     arg_parser.add_argument("--locale_dirs", help="locale/  (it must same with variable locale_dirs that from conf.py)", dest="locale_dirs", default='locale/')
