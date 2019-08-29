@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CarsonDoc \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 13:37+0800\n"
+"POT-Creation-Date: 2019-08-29 13:38+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,84 +17,84 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../source/_src/GitHub/github_page.rst:6
+#: ../source/_src/GitHub/_src/github_page.rst:6
 msgid "GitHub Page"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:10
+#: ../source/_src/GitHub/_src/github_page.rst:10
 msgid ":field-name:`Release:` 0.0.0"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:11
+#: ../source/_src/GitHub/_src/github_page.rst:11
 msgid ":field-name:`Last updated:` 2019/08/21"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:12
+#: ../source/_src/GitHub/_src/github_page.rst:12
 msgid ":field-name:`Authors:` |MainAuthor|"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:13
+#: ../source/_src/GitHub/_src/github_page.rst:13
 msgid ":field-name:`Target:` Create"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:14
+#: ../source/_src/GitHub/_src/github_page.rst:14
 msgid ":field-name:`Status:` 1"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:17
+#: ../source/_src/GitHub/_src/github_page.rst:17
 msgid "Free domain"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:18
+#: ../source/_src/GitHub/_src/github_page.rst:18
 msgid "DNS"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:19
+#: ../source/_src/GitHub/_src/github_page.rst:19
 msgid "Web hosing"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:20
+#: ../source/_src/GitHub/_src/github_page.rst:20
 msgid "https"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:24
+#: ../source/_src/GitHub/_src/github_page.rst:24
 msgid "root & child nodes"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:30
+#: ../source/_src/GitHub/_src/github_page.rst:30
 msgid "New repository"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:27
+#: ../source/_src/GitHub/_src/github_page.rst:27
 msgid "Repository name: ``{user_name}.github.io``"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:28
+#: ../source/_src/GitHub/_src/github_page.rst:28
 msgid "public"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:30
+#: ../source/_src/GitHub/_src/github_page.rst:30
 msgid ""
 "private: Upgrade to GitHub Pro or make this repository public to enable "
 "Wikis. ($7.00 / month)"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:36
+#: ../source/_src/GitHub/_src/github_page.rst:36
 msgid ""
 "design by yourself or find your favorite theme in { `sphinx themes <https"
 "://sphinx-themes.org/>`_ , `jekyllthemes <http://jekyllthemes.org/>`_ } "
 "and apply them"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:36
+#: ../source/_src/GitHub/_src/github_page.rst:36
 msgid "Select source:"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:34
+#: ../source/_src/GitHub/_src/github_page.rst:34
 msgid "master branch"
 msgstr ""
 
-#: ../../source/_src/GitHub/github_page.rst:35
+#: ../source/_src/GitHub/_src/github_page.rst:35
 msgid "master branch /docs folder"
 msgstr ""
 

@@ -17,43 +17,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../source/index.rst:8
-msgid "Carson Home"
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:5
+msgid "Sass/SCSS"
 msgstr ""
 
-#: ../source/index.rst:12
-msgid ":field-name:`Release:` 1.0.0"
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:9
+msgid ":field-name:`Release:` 0.0.0"
 msgstr ""
 
-#: ../source/index.rst:13
-msgid ":field-name:`Last updated:` 2019/08/28"
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:10
+msgid ":field-name:`Last updated:` 2019/08/29"
 msgstr ""
 
-#: ../source/index.rst:14
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:11
 msgid ":field-name:`Authors:` |MainAuthor|"
 msgstr ""
 
-#: ../source/index.rst:15
-msgid ":field-name:`Target:` Web"
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:12
+msgid ":field-name:`Target:` Sass/SCSS init"
 msgstr ""
 
-#: ../source/index.rst:16
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:13
 msgid ":field-name:`Status:` 1"
 msgstr ""
 
-#: ../source/index.rst:19
-msgid "Article"
-msgstr ""
-
-#: ../source/index.rst:51
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:25
 msgid "Indices and tables"
 msgstr ""
 
-#: ../source/index.rst:53
-msgid ":ref:`linking-amend_history`"
-msgstr ""
-
-#: ../source/index.rst:54
-msgid ":ref:`search`"
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:27
+msgid ":ref:`ROOT PAGE <linking.ROOT>`"
 msgstr ""
 
