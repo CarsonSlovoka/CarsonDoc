@@ -43,6 +43,7 @@ def show_current_job_at_console(msg, align='center', flag='*', flag_len=60):
 
 
 def run_cmd_command(cmd_list):
+    # job = Popen(cmd_list, stdout=PIPE, stderr=PIPE, stdin=DEVNULL)  # for debug
     job = Popen(cmd_list, stdout=PIPE, stderr=DEVNULL, stdin=DEVNULL)
     result = job.communicate()
     return result[0].decode()
@@ -132,6 +133,20 @@ def sphinx_build_html(args):
         input('Please press any key to continue...')
 
 
+@show_job('create home index page')
+def build_select_language_page(out_dir):
+    abspath = path.abspath
+    input_scss_dir = abspath('_build/select_language.scss')
+    output_css = abspath(out_dir + '/select_language.css')
+    # sass.bat which location is at: {Ruby25-x64\bin\}. you must install ruby
+    run_cmd_command(['sass.bat',  # you must give file extension: .bat otherwise, it will cause ambiguous because it has two files sass, sass.bat both with the same name: sass
+                     '--style', 'compressed',
+                     input_scss_dir, output_css])
+    language_html = path.abspath(f'{out_dir}/index.html')
+    if path.exists(language_html):
+        startfile(language_html)
+
+
 def main():
     global args
     if show_current_job_at_console('your config:'):
@@ -144,6 +159,7 @@ def main():
         2: (show_language_list.__name__, lambda: show_language_list(args.src_dir, args.locale_dirs)),
         3: (get_po_file.__name__, lambda: get_po_file(path.abspath(path.join(args.src_dir, args.locale_dirs)), args.lang)),
         4: (sphinx_build_html.__name__, lambda: sphinx_build_html(args)),
+        10: (build_select_language_page.__name__, lambda: build_select_language_page(args.out_dir)),
         99: (run_all_process.__name__, lambda: run_all_process(args)),  # this command (that run all procedure) usually used for the first building
     }
     while 1:
