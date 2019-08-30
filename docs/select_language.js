@@ -17,19 +17,10 @@ $('select').each(function(){ // find all node of "select"
     }).insertAfter($styledSelect);
   
     for (var i = 0; i < numberOfOptions; i++) {
-        var $tmp_li = $('<li />', {
+        $('<li />', {
             text: $this.children('option').eq(i).text(),
             rel: $this.children('option').eq(i).val()
-        });
-		
-		/*
-		$('<a />', {
-			href: $this.children('option').eq(i).val(),
-			text: $this.children('option').eq(i).text(),
-		}).appendTo($tmp_li);
-		*/
-		
-		$tmp_li.appendTo($list);
+        }).appendTo($list);
     }
   
     var $listItems = $list.children('li');
@@ -46,9 +37,9 @@ $('select').each(function(){ // find all node of "select"
         e.stopPropagation();
         $styledSelect.text($(this).text()).removeClass('active');
         $this.val($(this).attr('rel'));
-        $list.hide();
-        //console.log($this.val());
+        $list.hide();        
 		window.location.href = $this.val(); // link to select language page
+		//console.log($this.val());
     });
   
     $(document).click(function() {
