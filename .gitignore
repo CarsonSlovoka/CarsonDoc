@@ -4,6 +4,7 @@ docs/temp
 
 docs/.sass-cache/
 _build/.sass-cache/
+.sass-cache/
 
 docs/select_language.css
 docs/select_language.css.map
