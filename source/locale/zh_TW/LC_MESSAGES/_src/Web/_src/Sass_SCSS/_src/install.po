@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Carson
+# This file is distributed under the same license as the CarsonDoc package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CarsonDoc \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-29 13:38+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:5
+msgid "Install"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:9
+msgid ":field-name:`Release:` 0.0.0"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:10
+msgid ":field-name:`Last updated:` 2019/08/28"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:11
+msgid ":field-name:`Authors:` |MainAuthor|"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:12
+msgid ":field-name:`Target:` install"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:13
+msgid ":field-name:`Status:` 1"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:18
+msgid "guideline"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:20
+msgid "There are two ways to compile scss/sass file."
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:22
+msgid "node js: npm"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:23
+msgid "ruby: gem"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:26
+msgid "node js"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:28
+msgid "download `node.js <https://nodejs.org/en/>`_ [#note-green]_"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:30
+msgid ""
+"after you finished, run command: ``npm --version`` to check install "
+"success"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:32
+msgid "勾選自動安裝Chocolatey"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:33
+msgid ""
+"nodejs will install at: ``%ProgramFiles%/nodejs`` which contains {npm, "
+"npx, node}"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:35
+msgid "npm install -g scss-compile"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:38
+msgid "/Usage:"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:38
+msgid "you can run it from any directory. Just run: ``npm run scss-compile``"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:41
+msgid "ruby"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:43
+msgid ""
+"download `ruby Ruby+Devkit 2.5.5-1 (x64) "
+"<https://rubyinstaller.org/downloads/>`_"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:44
+msgid "``ruby -v`` or ``ruby --version``"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:45
+msgid ""
+"after you download ruby, you will get the **gem** . using ``gem "
+"environment`` to watch all path."
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:46
+msgid "update gem: ``gem update --system``"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:47
+msgid "``gem install sass``"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:49
+msgid ""
+"all you install packages which location will at "
+"``{ruby_dir}\\gems\\{gem_version2.5.0}\\gems``"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:52
+msgid "``sass -v`` > *Ruby Sass 3.7.4*"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:53
+msgid "`option:` ``gem install compass``"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:55
+msgid "如果你的scss檔案裏面有用到，就要安裝，例如"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:57
+msgid "@import \"compass/css3\";"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:61
+msgid "If you can't install successfully."
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:63
+msgid ""
+"you must get there which is https://github.com/Igosuki/compass-mixins and"
+" clone it."
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:65
+msgid "all the .sass inside ``compass-mixins\\lib\\*`` that is what you need！"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:69
+msgid "Usage:"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:68
+msgid "``sass input.scss output.css``"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:73
+msgid ""
+"`PyCharm Setting <https://www.jetbrains.com/help/pycharm/transpiling-"
+"sass-less-and-scss-to-css.html>`_"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:75
+msgid ""
+"Installing Sass/SCSS ``npm install -g sass`` LEARN MORE > https://sass-"
+"lang.com/install"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:82
+msgid "Reference"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:84
+msgid ""
+"★ go to `node green <https://node.green/>`_ to check whether packages are"
+" available"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/_src/install.rst:86
+msgid "practice HTML+CSS(scss, sass)+JS: https://codepen.io"
+msgstr ""
+

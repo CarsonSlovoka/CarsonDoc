@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Carson
+# This file is distributed under the same license as the CarsonDoc package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CarsonDoc \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-29 13:38+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../source/_src/Sphinx/_src/admonition.rst:6
+msgid "Admonitions"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:10
+msgid ":field-name:`Release:` 0.0.0"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:11
+msgid ":field-name:`Last updated:` 2019/08/21"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:12
+msgid ":field-name:`Authors:` |MainAuthor|"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:13
+msgid ":field-name:`Target:` define style"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:14
+msgid ":field-name:`Status:` 3"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:17
+msgid "admonition"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:19
+#: ../source/_src/Sphinx/_src/admonition.rst:27
+#: ../source/_src/Sphinx/_src/admonition.rst:35
+#: ../source/_src/Sphinx/_src/admonition.rst:42
+#: ../source/_src/Sphinx/_src/admonition.rst:50
+#: ../source/_src/Sphinx/_src/admonition.rst:57
+#: ../source/_src/Sphinx/_src/admonition.rst:64
+#: ../source/_src/Sphinx/_src/admonition.rst:71
+#: ../source/_src/Sphinx/_src/admonition.rst:78
+msgid "Neque porro quisquam"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:21
+#: ../source/_src/Sphinx/_src/admonition.rst:29
+#: ../source/_src/Sphinx/_src/admonition.rst:37
+#: ../source/_src/Sphinx/_src/admonition.rst:44
+#: ../source/_src/Sphinx/_src/admonition.rst:52
+#: ../source/_src/Sphinx/_src/admonition.rst:59
+#: ../source/_src/Sphinx/_src/admonition.rst:66
+#: ../source/_src/Sphinx/_src/admonition.rst:73
+#: ../source/_src/Sphinx/_src/admonition.rst:80
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis "
+"commodo eros, quis posuere enim lobortis quis. Nullam ut tempus nibh."
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:25
+msgid "caution"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:32
+msgid "danger"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:40
+msgid "error"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:48
+msgid "hint"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:55
+msgid "important"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:62
+msgid "note"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:69
+msgid "tip"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:76
+msgid "warning"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:83
+msgid "define your style"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:85
+msgid "section"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:87
+msgid "title"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:89
+msgid "add your css at: ``_static/css/Page.css``"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:91
+msgid "conf.py::"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/admonition.rst:95
+msgid "use::"
+msgstr ""
+

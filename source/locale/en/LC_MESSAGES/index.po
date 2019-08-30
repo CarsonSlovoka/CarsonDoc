@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CarsonDoc \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 13:37+0800\n"
+"POT-Creation-Date: 2019-08-29 13:38+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,55 +17,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../source/index.rst:18
-msgid "Sphinx Tutorial"
-msgstr ""
-
-#: ../../source/index.rst:28
-msgid "GitHub"
-msgstr ""
-
-#: ../../source/index.rst:37
-msgid "Git"
-msgstr ""
-
-#: ../../source/index.rst:5
+#: ../source/index.rst:8
 msgid "Carson Home"
 msgstr ""
 
-#: ../../source/index.rst:9
-msgid ":field-name:`Release:` 0.1.0"
+#: ../source/index.rst:12
+msgid ":field-name:`Release:` 1.0.0"
 msgstr ""
 
-#: ../../source/index.rst:10
-msgid ":field-name:`Last updated:` 2019/08/22"
+#: ../source/index.rst:13
+msgid ":field-name:`Last updated:` 2019/08/28"
 msgstr ""
 
-#: ../../source/index.rst:11
+#: ../source/index.rst:14
 msgid ":field-name:`Authors:` |MainAuthor|"
 msgstr ""
 
-#: ../../source/index.rst:12
-msgid ":field-name:`Target:` Git"
+#: ../source/index.rst:15
+msgid ":field-name:`Target:` Web"
 msgstr ""
 
-#: ../../source/index.rst:13
+#: ../source/index.rst:16
 msgid ":field-name:`Status:` 1"
 msgstr ""
 
-#: ../../source/index.rst:16
+#: ../source/index.rst:19
 msgid "Article"
 msgstr ""
 
-#: ../../source/index.rst:45
+#: ../source/index.rst:51
 msgid "Indices and tables"
 msgstr ""
 
-#: ../../source/index.rst:47
+#: ../source/index.rst:53
 msgid ":ref:`linking-amend_history`"
 msgstr ""
 
-#: ../../source/index.rst:48
+#: ../source/index.rst:54
 msgid ":ref:`search`"
 msgstr ""
 

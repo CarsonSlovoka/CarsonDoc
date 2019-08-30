@@ -116,9 +116,14 @@ if 'Carson':
     if 'global variable setting':
         variable_list = [f'.. |MainAuthor| replace:: {author}',
                          f'.. |cur_date| date:: %Y-%m-%d',
-                         f'.. include:: {os.path.dirname(__file__)}/_templates/CSS_DECLARE/color.dc_css',
+                         # f'.. include:: {os.path.dirname(__file__)}/_templates/CSS_DECLARE/color.dc_css',
                          ]
         rst_epilog = '\n'.join(variable_list) + '\n'
+
+        with open("_templates/CSS_DECLARE/color.dc_css", 'r', encoding='utf-8') as f:
+            declare_color_data = f.read()
+        rst_epilog += declare_color_data + '\n'
+
         # print(rst_epilog)
 
     html_show_sourcelink = False  # Close the page will have the function of linking to the original rst file.

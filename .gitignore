@@ -1,6 +1,18 @@
-docs/
+docs/en/
+docs/zh_TW
+docs/temp
+
+docs/.sass-cache/
+_build/.sass-cache/
+
+docs/select_language.css
+docs/select_language.css.map
+
 .idea/
 *.DS_Store
+
+# .pot files from sphinx-build source gettext -b gettext. it doesn't matter just make sure .po files exists is more than enough.
+_gettext/
 
 # .mo is compiled from "sphinx-build -b html source docs/zh-tw  -D language=zh_TW"
 *.mo

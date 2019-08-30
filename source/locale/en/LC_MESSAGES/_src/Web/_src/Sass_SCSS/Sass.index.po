@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Carson
+# This file is distributed under the same license as the CarsonDoc package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CarsonDoc \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-29 13:38+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:5
+msgid "Sass/SCSS"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:9
+msgid ":field-name:`Release:` 0.0.0"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:10
+msgid ":field-name:`Last updated:` 2019/08/29"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:11
+msgid ":field-name:`Authors:` |MainAuthor|"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:12
+msgid ":field-name:`Target:` Sass/SCSS init"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:13
+msgid ":field-name:`Status:` 1"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:25
+msgid "Indices and tables"
+msgstr ""
+
+#: ../source/_src/Web/_src/Sass_SCSS/Sass.index.rst:27
+msgid ":ref:`ROOT PAGE <linking.ROOT>`"
+msgstr ""
+

@@ -19,6 +19,7 @@ How to run this script?
 from stdafx import show_current_job_at_console  # just like the regular print function but decorated with special text.  (It's not necessary)
 from subprocess import Popen, PIPE, DEVNULL
 from os import scandir, path, startfile
+from shutil import rmtree
 import configparser  # https://docs.python.org/3/library/configparser.html
 
 
@@ -42,6 +43,7 @@ def show_current_job_at_console(msg, align='center', flag='*', flag_len=60):
 
 
 def run_cmd_command(cmd_list):
+    # job = Popen(cmd_list, stdout=PIPE, stderr=PIPE, stdin=DEVNULL)  # for debug
     job = Popen(cmd_list, stdout=PIPE, stderr=DEVNULL, stdin=DEVNULL)
     result = job.communicate()
     return result[0].decode()
@@ -49,8 +51,8 @@ def run_cmd_command(cmd_list):
 
 @show_job('create .pot: get all text from source/*.rst')
 def get_text(src_dir, out_dir):
-    # sphinx-build source docs/gettext -b gettext
-    print(run_cmd_command(["sphinx-build", src_dir, f"{out_dir}/gettext",
+    # sphinx-build source gettext -b gettext
+    print(run_cmd_command(["sphinx-build", src_dir, f"_gettext",
                            "-b", "gettext"]))
     input('Please press any key to continue...')
 
@@ -58,6 +60,10 @@ def get_text(src_dir, out_dir):
 @show_job('available language list:', align='left', flag='-', flag_len=30)
 def show_language_list(src_dir, local_dirs):
     locale_dirs = path.abspath(path.join(src_dir, local_dirs))
+    if not path.exists(locale_dirs):
+        print(f'File Not Found Error: {locale_dirs}')
+        return []
+
     language_list = []
     for cur_dir_path in [entry.path for entry in scandir(locale_dirs) if entry.is_dir(follow_symlinks=False)]:
         lang = path.basename(cur_dir_path)
@@ -67,19 +73,25 @@ def show_language_list(src_dir, local_dirs):
     return language_list
 
 
-@show_job('create .po: from out_dir/gettext/*.pot to source/locale/*.po')
-def get_po_file(out_dir, lang_list):
+@show_job('create .po: from _gettext/*.pot to source/locale/*.po')
+def get_po_file(locale_dir, lang_list):
     """
-    REM sphinx-intl update -p docs/gettext  # If the language directory already exists, just using this command!
-    sphinx-intl update -p docs/gettext -l zh_TW -l en -l zh-CN
-    REM sphinx-intl update -p docs/gettext -l en  It't ok {-l multiple language}
+    REM sphinx-intl update -p _gettext  # If the language directory already exists, just using this command!
+    sphinx-intl update -p _gettext -l zh_TW -l en -l zh-CN
+    REM sphinx-intl update -p _gettext -l en  It't ok {-l multiple language}
     """
-    if lang_list is None:
-        print(run_cmd_command(["sphinx-intl", 'update', '-p', f"{out_dir}/gettext"]))
+
+    if lang_list == "" and path.exists(locale_dir):
+        print(run_cmd_command(["sphinx-intl", 'update', '-p', f"_gettext"]))
+        input('Please press any key to continue...')
+        return
+
+    if lang_list == "":
+        print('Language folder is empty. You must select a language before initial.')
         return
 
     for cur_lang in lang_list.split(','):
-        print(run_cmd_command(["sphinx-intl", 'update', '-p', f"{out_dir}/gettext",
+        print(run_cmd_command(["sphinx-intl", 'update', '-p', f"_gettext",
                                '-l', cur_lang]))
     input('Please press any key to continue...')
 
@@ -114,8 +126,25 @@ def sphinx_build_html(args):
                          '-D', f"language={response_lang}"])
         print(f"run command:  {' '.join(cmd_list)}")
         print(run_cmd_command(cmd_list))
-        startfile(path.abspath(f'{out_dir}/{response_lang}/index.html'))
+        out_path = path.abspath(f'{out_dir}/{response_lang}')
+        startfile(path.join(out_path, 'index.html'))
+        if path.exists(path.join(out_path, '_sources')):
+            rmtree(path.abspath(f'{out_dir}/{response_lang}/_sources'))
         input('Please press any key to continue...')
+
+
+@show_job('create home index page')
+def build_select_language_page(out_dir):
+    abspath = path.abspath
+    input_scss_dir = abspath('_build/select_language.scss')
+    output_css = abspath(out_dir + '/select_language.css')
+    # sass.bat which location is at: {Ruby25-x64\bin\}. you must install ruby
+    run_cmd_command(['sass.bat',  # you must give file extension: .bat otherwise, it will cause ambiguous because it has two files sass, sass.bat both with the same name: sass
+                     '--style', 'compressed',
+                     input_scss_dir, output_css])
+    language_html = path.abspath(f'{out_dir}/index.html')
+    if path.exists(language_html):
+        startfile(language_html)
 
 
 def main():
@@ -128,8 +157,9 @@ def main():
         0: ('Exit script', lambda: exit(0)),
         1: (get_text.__name__, lambda: get_text(args.src_dir, args.out_dir)),
         2: (show_language_list.__name__, lambda: show_language_list(args.src_dir, args.locale_dirs)),
-        3: (get_po_file.__name__, lambda: get_po_file(args.out_dir, args.lang)),
+        3: (get_po_file.__name__, lambda: get_po_file(path.abspath(path.join(args.src_dir, args.locale_dirs)), args.lang)),
         4: (sphinx_build_html.__name__, lambda: sphinx_build_html(args)),
+        10: (build_select_language_page.__name__, lambda: build_select_language_page(args.out_dir)),
         99: (run_all_process.__name__, lambda: run_all_process(args)),  # this command (that run all procedure) usually used for the first building
     }
     while 1:
@@ -159,7 +189,7 @@ if __name__ == '__main__':
 
     arg_parser = ArgumentParser()
     arg_parser.add_argument("-l", "--language", help="en,zh_TW... (LEARN MORE > http://www.sphinx-doc.org/en/master/usage/configuration.html)",
-                            dest="lang", default=None)
+                            dest="lang", default="")
     arg_parser.add_argument("--src_dir", help="source ('source' is example but recommended)", dest="src_dir", default='source')
     arg_parser.add_argument("--out_dir", help="docs (if you are using GitHub Page, I strongly recommend you use docs.)", dest="out_dir", default='docs')
     arg_parser.add_argument("--locale_dirs", help="locale/  (it must same with variable locale_dirs that from conf.py)", dest="locale_dirs", default='locale/')
