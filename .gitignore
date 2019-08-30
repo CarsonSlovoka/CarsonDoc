@@ -1,4 +1,13 @@
-docs/
+docs/en/
+docs/zh_TW
+docs/temp
+
+docs/.sass-cache/
+_build/.sass-cache/
+
+docs/select_language.css
+docs/select_language.css.map
+
 .idea/
 *.DS_Store
 
