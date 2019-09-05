@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CarsonDoc \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-29 13:38+0800\n"
+"POT-Creation-Date: 2019-09-05 17:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,11 +22,11 @@ msgid "Basic Specification"
 msgstr ""
 
 #: ../source/_src/Sphinx/_src/basic.rst:10
-msgid ":field-name:`Release:` 0.0.0"
+msgid ":field-name:`Release:` 0.0.1"
 msgstr ""
 
 #: ../source/_src/Sphinx/_src/basic.rst:11
-msgid ":field-name:`Last updated:` 2019/08/20"
+msgid ":field-name:`Last updated:` 2019/09/05"
 msgstr ""
 
 #: ../source/_src/Sphinx/_src/basic.rst:12
@@ -34,7 +34,7 @@ msgid ":field-name:`Authors:` |MainAuthor|"
 msgstr ""
 
 #: ../source/_src/Sphinx/_src/basic.rst:13
-msgid ":field-name:`Target:` reformat"
+msgid ":field-name:`Target:` goto ref"
 msgstr ""
 
 #: ../source/_src/Sphinx/_src/basic.rst:14
@@ -73,297 +73,317 @@ msgstr ""
 msgid "external hyperlinks： Python_"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:30
+#: ../source/_src/Sphinx/_src/basic.rst:28
 msgid "demoe:"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:32
-msgid "click me link to Python_"
-msgstr ""
-
-#: ../source/_src/Sphinx/_src/basic.rst:34
-msgid "click me link to `google <https://www.google.com.tw/>`_"
+#: ../source/_src/Sphinx/_src/basic.rst:30
+msgid "click me link to Python_ ::"
 msgstr ""
 
 #: ../source/_src/Sphinx/_src/basic.rst:36
-msgid "internal cross-references： go_to_example_"
+msgid "click me link to `google <https://www.google.com.tw/>`_"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/basic.rst:38
+msgid "```google <https://www.google.com.tw/>`_``"
 msgstr ""
 
 #: ../source/_src/Sphinx/_src/basic.rst:40
+msgid "click me :ref:`go to <linking-Sphinx.Basic>` ::"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/basic.rst:49
+msgid "internal cross-references： go_to_example_"
+msgstr ""
+
+#: ../source/_src/Sphinx/_src/basic.rst:53
 msgid "The \"_example\" target above points to this paragraph."
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:42
-#: ../source/_src/Sphinx/_src/basic.rst:60
-#: ../source/_src/Sphinx/_src/basic.rst:71
-#: ../source/_src/Sphinx/_src/basic.rst:190
-#: ../source/_src/Sphinx/_src/basic.rst:219
+#: ../source/_src/Sphinx/_src/basic.rst:55
+#: ../source/_src/Sphinx/_src/basic.rst:73
+#: ../source/_src/Sphinx/_src/basic.rst:84
+#: ../source/_src/Sphinx/_src/basic.rst:203
+#: ../source/_src/Sphinx/_src/basic.rst:232
 msgid "syntax::"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:52
+#: ../source/_src/Sphinx/_src/basic.rst:65
 msgid "footnote references: [1]_ (``[1]_``)"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:54
+#: ../source/_src/Sphinx/_src/basic.rst:67
 msgid "citation references: [CIT2002]_  (``[CIT2002]_``)"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:56
+#: ../source/_src/Sphinx/_src/basic.rst:69
 msgid "substitution references: |replace demo|"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:66
+#: ../source/_src/Sphinx/_src/basic.rst:79
 msgid "replace and link: |mathjax|_"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:78
+#: ../source/_src/Sphinx/_src/basic.rst:91
 msgid "function: ``py:function:: def start(file):``"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:83
+#: ../source/_src/Sphinx/_src/basic.rst:96
 msgid "define your style"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:85
+#: ../source/_src/Sphinx/_src/basic.rst:98
 msgid "declare css at ``source\\_templates\\CSS_DECLARE\\{my.css}`` ::"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:89
+#: ../source/_src/Sphinx/_src/basic.rst:102
 msgid "conf.py::"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:93
+#: ../source/_src/Sphinx/_src/basic.rst:106
 msgid "use it: :blue:`blue color` (``:blue:`blue color```)"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:100
+#: ../source/_src/Sphinx/_src/basic.rst:113
 msgid "List"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:103
+#: ../source/_src/Sphinx/_src/basic.rst:116
 msgid "Bullet lists:"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:105
+#: ../source/_src/Sphinx/_src/basic.rst:118
 msgid "This is a bullet list."
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:107
+#: ../source/_src/Sphinx/_src/basic.rst:120
 msgid "Bullets can be \"*\", \"+\", or \"-\"."
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:111
+#: ../source/_src/Sphinx/_src/basic.rst:124
 msgid "Enumerated lists:"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:113
+#: ../source/_src/Sphinx/_src/basic.rst:126
 msgid "This is an enumerated list."
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:115
+#: ../source/_src/Sphinx/_src/basic.rst:128
 msgid "Enumerators may be arabic numbers, letters, or roman numerals."
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:119
+#: ../source/_src/Sphinx/_src/basic.rst:132
 msgid "Definition lists:"
 msgstr ""
 
 #: ../source/_src/Sphinx/_src/basic.rst
-#: ../source/_src/Sphinx/_src/basic.rst:122
+#: ../source/_src/Sphinx/_src/basic.rst:135
 msgid "what"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:122
+#: ../source/_src/Sphinx/_src/basic.rst:135
 msgid "Definition lists associate a term with a definition."
 msgstr ""
 
 #: ../source/_src/Sphinx/_src/basic.rst
-#: ../source/_src/Sphinx/_src/basic.rst:127
+#: ../source/_src/Sphinx/_src/basic.rst:140
 msgid "how"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:125
+#: ../source/_src/Sphinx/_src/basic.rst:138
 msgid ""
 "The term is a one-line phrase, and the definition is one or more "
 "paragraphs or body elements, indented relative to the term."
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:130
+#: ../source/_src/Sphinx/_src/basic.rst:143
 msgid "Field lists:"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:132
+#: ../source/_src/Sphinx/_src/basic.rst:145
 msgid ""
 "Field lists map field names to field bodies, like database records.  They"
 " are often part of an extension syntax."
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:136
+#: ../source/_src/Sphinx/_src/basic.rst:149
 msgid "The field marker is a colon, the field name, and a colon."
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:139
+#: ../source/_src/Sphinx/_src/basic.rst:152
 msgid ""
 "The field body may contain one or more body elements, indented relative "
 "to the field marker."
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:143
+#: ../source/_src/Sphinx/_src/basic.rst:156
 msgid "Option lists"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:145
+#: ../source/_src/Sphinx/_src/basic.rst:158
 msgid "for listing command-line options:"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:147
+#: ../source/_src/Sphinx/_src/basic.rst:160
 msgid "command-line option \"a\""
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:148
+#: ../source/_src/Sphinx/_src/basic.rst:161
 msgid "options can have arguments and long descriptions"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:150
+#: ../source/_src/Sphinx/_src/basic.rst:163
 msgid "options can be long also"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:151
+#: ../source/_src/Sphinx/_src/basic.rst:164
 msgid "long options can also have arguments"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:153
+#: ../source/_src/Sphinx/_src/basic.rst:166
 msgid "DOS/VMS-style options too"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:157
+#: ../source/_src/Sphinx/_src/basic.rst:170
 msgid "Literal blocks:"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:168
+#: ../source/_src/Sphinx/_src/basic.rst:181
 msgid "Block quotes:"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:170
+#: ../source/_src/Sphinx/_src/basic.rst:183
 msgid "This theory, that is mine, is mine."
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:176
+#: ../source/_src/Sphinx/_src/basic.rst:189
 msgid "Anne Elk (Miss)"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:176
+#: ../source/_src/Sphinx/_src/basic.rst:189
 msgid "Table"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:178
+#: ../source/_src/Sphinx/_src/basic.rst:191
 msgid "quickly create table: `online table editor <https://truben.no/table/>`_"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:181
+#: ../source/_src/Sphinx/_src/basic.rst:194
 msgid "Simple"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:184
+#: ../source/_src/Sphinx/_src/basic.rst:197
 msgid "Header row, column 1"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:184
+#: ../source/_src/Sphinx/_src/basic.rst:197
 msgid "Header 2"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:184
+#: ../source/_src/Sphinx/_src/basic.rst:197
 msgid "Header 3"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:186
+#: ../source/_src/Sphinx/_src/basic.rst:199
 msgid "body row 1, column 1"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:186
+#: ../source/_src/Sphinx/_src/basic.rst:199
 msgid "column 2"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:186
+#: ../source/_src/Sphinx/_src/basic.rst:199
 msgid "column 3"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:187
+#: ../source/_src/Sphinx/_src/basic.rst:200
 msgid "body row 2"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:187
+#: ../source/_src/Sphinx/_src/basic.rst:200
 msgid "Cells may span columns"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:201
+#: ../source/_src/Sphinx/_src/basic.rst:214
 msgid "tradition"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:204
+#: ../source/_src/Sphinx/_src/basic.rst:217
 msgid "Description"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:204
+#: ../source/_src/Sphinx/_src/basic.rst:217
 msgid "1 month"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:204
+#: ../source/_src/Sphinx/_src/basic.rst:217
 msgid "6 month"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:206
+#: ../source/_src/Sphinx/_src/basic.rst:219
 msgid "money back"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:206
+#: ../source/_src/Sphinx/_src/basic.rst:219
 msgid "X"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:206
+#: ../source/_src/Sphinx/_src/basic.rst:219
 msgid "V"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:208
+#: ../source/_src/Sphinx/_src/basic.rst:221
 msgid "M"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:210
+#: ../source/_src/Sphinx/_src/basic.rst:223
 msgid "O"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:212
+#: ../source/_src/Sphinx/_src/basic.rst:225
 msgid "N"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:214
+#: ../source/_src/Sphinx/_src/basic.rst:227
 msgid "E"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:216
+#: ../source/_src/Sphinx/_src/basic.rst:229
 msgid "Y"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:208
+#: ../source/_src/Sphinx/_src/basic.rst:221
 msgid "5"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:208
+#: ../source/_src/Sphinx/_src/basic.rst:221
 msgid "10"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:240
+#: ../source/_src/Sphinx/_src/basic.rst:253
 msgid "Citation"
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:242
+#: ../source/_src/Sphinx/_src/basic.rst:255
 msgid ""
 "A footnote contains body elements, consistently indented by at least 3 "
 "spaces."
 msgstr ""
 
-#: ../source/_src/Sphinx/_src/basic.rst:245
+#: ../source/_src/Sphinx/_src/basic.rst:258
 msgid "Just like a footnote, except the label is textual."
 msgstr ""
+
+#~ msgid ":field-name:`Release:` 0.0.0"
+#~ msgstr ""
+
+#~ msgid ":field-name:`Last updated:` 2019/08/20"
+#~ msgstr ""
+
+#~ msgid ":field-name:`Target:` reformat"
+#~ msgstr ""
+
+#~ msgid "click me link to Python_"
+#~ msgstr ""
 

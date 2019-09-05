@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Carson
+# This file is distributed under the same license as the CarsonDoc package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CarsonDoc \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-05 17:01+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:6
+msgid "Tutorial"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:10
+msgid ":field-name:`Release:` 0.0.0"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:11
+msgid ":field-name:`Last updated:` 2019/09/05"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:12
+msgid ":field-name:`Authors:` |MainAuthor|"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:13
+msgid ":field-name:`Target:` publish to PyPI"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:14
+msgid ":field-name:`Status:` 1"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:19
+msgid "How to Pronounce?"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:21
+msgid "PyPy is pronounced \"pie pie\","
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:23
+msgid "PyPI is pronounced \"pie pee eye\" or \"the cheeseshop\"."
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:26
+msgid "Create Account"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:28
+msgid ""
+"If you don't have an account yet, go to the `official website "
+"<https://pypi.org/>`_ to register an account:"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:31
+msgid "Settings"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:33
+msgid "**load account and password from config**"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:35
+msgid "create ``.pypirc`` file at ``%USERPROFILE%/.pypirc``"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:37
+msgid "**file contents**::"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:56
+msgid "that will publish to two websites (pypi and pypitest) at the same time."
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:58
+msgid "just remove if you won't need someone"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:61
+msgid "Prepare setup.py"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:63
+msgid "Set your directory structure are as follows:"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:65
+msgid ".setup.py [#note-setup.py]_"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:66
+msgid "README.{rst, md}"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:67
+msgid "README file is not necessary to be located here but recommended"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:68
+msgid "{packages_1}/{subItem}/{file.py}"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:70
+msgid "{packages_2}/{everything you wan't}/{file2.py}"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:70
+msgid "name of \"packages\" is an example, not necessary named to same."
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:72
+msgid ""
+"Remember! These are all related to the contents of the ``setup.py`` "
+"[#note-setup.py]_ file."
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:74
+msgid ""
+"name of \"setup.py\" is not necessary named to so, but this has been used"
+" or accepted in the society."
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:77
+msgid "**setup.py contents:**"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:154
+msgid "py2exe"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:156
+msgid "pyInstaller - Cross-platform"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:157
+msgid "cx_Freeze - Cross-platform"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:158
+msgid "constructor - For command-line installers"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:159
+msgid "py2exe - Windows only"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:160
+msgid "py2app - Mac only"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:161
+msgid "bbFreeze - Windows, Linux, Python 2 only"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:162
+msgid "osnap - Windows and Mac"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:163
+msgid "pynsist - Windows only"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:165
+msgid "`See more > <https://packaging.python.org/overview/>`_"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:168
+msgid "Reference"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:170
+msgid ""
+"`What's different between distutils and setuptools "
+"<https://stackoverflow.com/questions/25337706/setuptools-vs-distutils-"
+"why-is-distutils-still-a-thing>`_"
+msgstr ""
+

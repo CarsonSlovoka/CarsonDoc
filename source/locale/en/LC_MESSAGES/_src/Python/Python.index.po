@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Carson
+# This file is distributed under the same license as the CarsonDoc package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CarsonDoc \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-05 17:01+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../source/_src/Python/Python.index.rst:7
+msgid "Python"
+msgstr ""
+
+#: ../source/_src/Python/Python.index.rst:11
+msgid ":field-name:`Release:` 0.0.0"
+msgstr ""
+
+#: ../source/_src/Python/Python.index.rst:12
+msgid ":field-name:`Last updated:` 2019/09/05"
+msgstr ""
+
+#: ../source/_src/Python/Python.index.rst:13
+msgid ":field-name:`Authors:` |MainAuthor|"
+msgstr ""
+
+#: ../source/_src/Python/Python.index.rst:14
+msgid ":field-name:`Target:` Python index init"
+msgstr ""
+
+#: ../source/_src/Python/Python.index.rst:15
+msgid ":field-name:`Status:` 1"
+msgstr ""
+
