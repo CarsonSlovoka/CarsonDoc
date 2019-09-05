@@ -7,10 +7,10 @@ Basic Specification
 
 .. sidebar:: Summary
 
-    * :field-name:`Release:` 0.0.0
-    * :field-name:`Last updated:` 2019/08/20
+    * :field-name:`Release:` 0.0.1
+    * :field-name:`Last updated:` 2019/09/05
     * :field-name:`Authors:` |MainAuthor|
-    * :field-name:`Target:` reformat
+    * :field-name:`Target:` goto ref
     * :field-name:`Status:` 5
 
 Paragraphs
@@ -25,13 +25,26 @@ Paragraphs contain text and may contain inline markup.
     * standalone hyperlinks： http://www.python.org
     * external hyperlinks： Python_
 
-        .. _Python: http://www.python.org
-
         demoe:
 
-            click me link to Python_
+            click me link to Python_ ::
+
+                Python_
+                .. _Python: http://www.python.org
+
 
             click me link to `google <https://www.google.com.tw/>`_
+
+                ```google <https://www.google.com.tw/>`_``
+
+            click me :ref:`go to <linking-Sphinx.Basic>` ::
+
+                .. _linking-Sphinx.Basic:
+                :ref:`linking-Sphinx.Basic`
+
+                :ref:`go to <linking-Sphinx.Basic>`
+
+        .. _Python: http://www.python.org
 
     * internal cross-references： go_to_example_
 

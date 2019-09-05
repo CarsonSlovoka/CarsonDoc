@@ -47,6 +47,13 @@ Article
 
 ----
 
+.. toctree::
+   :maxdepth: 3
+
+   _src/Python/Python.index.rst
+
+----
+
 Indices and tables
 ==================
 
