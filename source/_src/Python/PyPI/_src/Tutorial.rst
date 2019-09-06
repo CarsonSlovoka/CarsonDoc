@@ -2,33 +2,39 @@
 
 .. _linking.Python.PyPI.Toturial:
 
+=================================
 Tutorial
 =================================
 
 .. sidebar:: Summary
 
-    * :field-name:`Release:` 0.0.0
-    * :field-name:`Last updated:` 2019/09/05
+    * :field-name:`Release:` 0.1.0
+    * :field-name:`Last updated:` 2019/09/06
     * :field-name:`Authors:` |MainAuthor|
-    * :field-name:`Target:` publish to PyPI
+    * :field-name:`Target:` reformat and add MANIFEST.in
     * :field-name:`Status:` 1
 
 ----
 
-How to Pronounce?
----------------------
+***********************
+1. How to Pronounce?
+***********************
 
-PyPy is pronounced "pie pie",
+PyPy is pronounced ``pie pie``,
 
-PyPI is pronounced "pie pee eye" or "the cheeseshop".
+PyPI is pronounced ``pie pee eye`` or ``the cheeseshop``.
 
-Create Account
-------------------
+*********************
+2. Publish To PyPI
+*********************
+
+2.1 Create Account
+====================
 
 If you don't have an account yet, go to the `official website <https://pypi.org/>`_ to register an account:
 
-Settings
-------------------
+2.2 Settings (account, password)
+========================================
 
 **load account and password from config**
 
@@ -57,24 +63,42 @@ Settings
 
         just remove if you won't need someone
 
-Prepare setup.py
------------------
+2.3 Prepare Data
+====================
 
 Set your directory structure are as follows:
 
-    * .setup.py [#note-setup.py]_
-    * README.{rst, md}
+    \file
+        * .setup.py [#note-setup.py]_
+        * MANIFEST.in
+        * README.{rst, md}
+
         .. note:: README file is not necessary to be located here but recommended
-    * {packages_1}/{subItem}/{file.py}
-    * {packages_2}/{everything you wan't}/{file2.py}
+
+        * LICENSE (Option)
+    \directory
+        * {packages} [#note-packages]_
+
         .. note:: name of "packages" is an example, not necessary named to same.
 
     .. important:: Remember! These are all related to the contents of the ``setup.py`` [#note-setup.py]_ file.
 
 .. [#note-setup.py] name of "setup.py" is not necessary named to so, but this has been used or accepted in the society.
+.. [#note-packages] After you `pip install {project}` finished that will also install those files that is what you append anything of files or directory in packages directory.
 
+2.3.1 Write contents
+====================
 
-**setup.py contents:**
+2.3.1.1 MANIFEST.in
+-----------------------
+
+::
+
+    include LICENSE
+    include {other files}
+
+2.3.1.2 setup.py
+-----------------------
 
 .. code-block:: python
 
@@ -150,22 +174,26 @@ Set your directory structure are as follows:
         ]
     )
 
+..  tip:: `Learn more > <https://packaging.python.org/guides/distributing-packages-using-setuptools/?highlight=manifest#setup-args>`_
+
+**************
 py2exe
---------------
+**************
 
-    * pyInstaller - Cross-platform
-    * cx_Freeze - Cross-platform
-    * constructor - For command-line installers
-    * py2exe - Windows only
-    * py2app - Mac only
-    * bbFreeze - Windows, Linux, Python 2 only
-    * osnap - Windows and Mac
-    * pynsist - Windows only
+* pyInstaller - Cross-platform
+* cx_Freeze - Cross-platform
+* constructor - For command-line installers
+* py2exe - Windows only
+* py2app - Mac only
+* bbFreeze - Windows, Linux, Python 2 only
+* osnap - Windows and Mac
+* pynsist - Windows only
 
-    `See more > <https://packaging.python.org/overview/>`_
+`See more > <https://packaging.python.org/overview/>`_
 
+**************
 Reference
-----------
+**************
 
-    * `What's different between distutils and setuptools <https://stackoverflow.com/questions/25337706/setuptools-vs-distutils-why-is-distutils-still-a-thing>`_
+* `What's different between distutils and setuptools <https://stackoverflow.com/questions/25337706/setuptools-vs-distutils-why-is-distutils-still-a-thing>`_
 
