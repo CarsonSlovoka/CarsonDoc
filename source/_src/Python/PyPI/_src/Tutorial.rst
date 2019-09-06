@@ -8,16 +8,18 @@ Tutorial
 
 .. sidebar:: Summary
 
-    * :field-name:`Release:` 0.1.0
+    * :field-name:`Release:` 0.2.0
     * :field-name:`Last updated:` 2019/09/06
     * :field-name:`Authors:` |MainAuthor|
-    * :field-name:`Target:` reformat and add MANIFEST.in
+    * :field-name:`Target:` add section number
     * :field-name:`Status:` 1
 
 ----
 
+.. sectnum::
+
 ***********************
-1. How to Pronounce?
+How to Pronounce?
 ***********************
 
 PyPy is pronounced ``pie pie``,
@@ -25,15 +27,15 @@ PyPy is pronounced ``pie pie``,
 PyPI is pronounced ``pie pee eye`` or ``the cheeseshop``.
 
 *********************
-2. Publish To PyPI
+Publish To PyPI
 *********************
 
-2.1 Create Account
+Create Account
 ====================
 
 If you don't have an account yet, go to the `official website <https://pypi.org/>`_ to register an account:
 
-2.2 Settings (account, password)
+Settings (account, password)
 ========================================
 
 **load account and password from config**
@@ -63,7 +65,7 @@ If you don't have an account yet, go to the `official website <https://pypi.org/
 
         just remove if you won't need someone
 
-2.3 Prepare Data
+Prepare Data
 ====================
 
 Set your directory structure are as follows:
@@ -86,18 +88,38 @@ Set your directory structure are as follows:
 .. [#note-setup.py] name of "setup.py" is not necessary named to so, but this has been used or accepted in the society.
 .. [#note-packages] After you `pip install {project}` finished that will also install those files that is what you append anything of files or directory in packages directory.
 
-2.3.1 Write contents
+Write contents
 ====================
 
-2.3.1.1 MANIFEST.in
+MANIFEST.in
 -----------------------
 
-::
+\Manifest-related options:
+    * if the manifest file (MANIFEST by default) exists and the first line does not have a comment indicating it is generated from MANIFEST.in, then it is used as is, unaltered
+    * ``if the manifest file doesn’t exist or has been previously automatically generated, read MANIFEST.in data to create the manifest``
+    * if neither MANIFEST nor MANIFEST.in exist, create a manifest with just the default file set
+    * use the list of files now in MANIFEST (either just generated or read in) to create the source distribution archive(s)
 
-    include LICENSE
-    include {other files}
+\contents:
+    ::
 
-2.3.1.2 setup.py
+        include LICENSE
+        include *.txt # include all files in the distribution root matching *.txt
+
+        exclude temp.py test.py  #
+
+        recursive-include examples *.txt *.py  # all files anywhere under the examples directory matching *.txt or *.py
+        recursive-exclude examples *.test
+
+        1 dir  # exclude all files under dir
+        prune examples/sample?/build  # exclude all directories matching examples/sample?/build.
+
+        graft dir  # include all files under dir
+
+
+`Learn more MANIFEST > <https://docs.python.org/2/distutils/sourcedist.html>`_
+
+setup.py
 -----------------------
 
 .. code-block:: python

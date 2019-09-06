@@ -2,18 +2,21 @@
 
 .. include:: ../../../_templates/CSS_DECLARE/color.dc_css
 
+=================================
 Basic Specification
 =================================
 
 .. sidebar:: Summary
 
-    * :field-name:`Release:` 0.1.0
-    * :field-name:`Last updated:` 2019/09/05
+    * :field-name:`Release:` 0.2.0
+    * :field-name:`Last updated:` 2019/09/06
     * :field-name:`Authors:` |MainAuthor|
-    * :field-name:`Target:` Paragraphs, rename title Hyperlink,
+    * :field-name:`Target:` reformat, Table {csv, list}
     * :field-name:`Status:` 5
 
-Paragraphs
+.. sectnum::
+
+Headings
 --------------
 
 * :field-name:`Part` ==== ====
@@ -259,6 +262,75 @@ tradition
             | Y                           |           |         |
             +-----------------------------+-----------+---------+
 
+CSV TABLE
+````````````
+
+.. csv-table:: Employee
+   :header: "ID", "Name", "Age"
+   :widths: 6, 10, 3
+
+   1, Carson, 28
+   2, "Frank
+
+   Wang", 43
+   3, Test, 60
+
+syntax::
+
+    .. csv-table:: Employee
+       :header: "ID", "Name", "Age"
+       :widths: 6, 10, 3
+
+       1, Carson, 28
+       2, "Frank
+
+       Wang", 43
+       3, Jill, 18
+
+
+
+
+LIST TABLE
+````````````
+.. list-table:: Frozen Delights!
+   :widths: 15 10 30
+   :header-rows: 1
+
+   * - ID
+     - Name
+     - Age
+   * - 1
+     - Carson
+     - 28
+   * - 2
+     - Frank
+
+       Wang
+     - 43
+   * - 3
+     - Jill
+     - 18
+
+syntax::
+
+    .. list-table:: Frozen Delights!
+       :widths: 15 10 30
+       :header-rows: 1
+
+       * - ID
+         - Name
+         - Age
+       * - 1
+         - Carson
+         - 28
+       * - 2
+         - Frank
+
+           Wang
+         - 43
+       * - 3
+         - Jill
+         - 18
 ----
 
 Citation
@@ -270,3 +342,10 @@ Citation
 .. [CIT2002] Just like a footnote, except the label is
    textual.
 
+-----------
+
+Reference
+-----------
+
+* `The TOC tree <https://www.sphinx-doc.org/en/1.5/markup/toctree.html>`_
+* `reStructuredText Directives <http://docutils.sourceforge.net/docs/ref/rst/directives.html>`_
