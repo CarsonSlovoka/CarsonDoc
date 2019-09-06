@@ -218,4 +218,5 @@ Reference
 **************
 
 * `What's different between distutils and setuptools <https://stackoverflow.com/questions/25337706/setuptools-vs-distutils-why-is-distutils-still-a-thing>`_
+* `Packaging Python Projects <https://packaging.python.org/tutorials/packaging-projects/>`_
 

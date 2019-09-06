@@ -25,10 +25,10 @@ like Python, RST syntax is sensitive to indentation!
 
 RST requires blank lines between paragraphs.
 
-----
+-----
 
 .. toctree::
-   :section:
+   :numbered:
    :maxdepth: 3
 
    _src/install.rst

@@ -14,7 +14,6 @@ Basic Specification
     * :field-name:`Target:` reformat, Table {csv, list}
     * :field-name:`Status:` 5
 
-.. sectnum::
 
 Headings
 --------------
@@ -108,7 +107,7 @@ Paragraphs contain text and may contain inline markup.
         .. py:function:: def start(file):
 
 define your style
-````````````````````````````
+----------------------------
 
     * declare css at ``source\_templates\CSS_DECLARE\{my.css}`` ::
 
@@ -331,6 +330,7 @@ syntax::
        * - 3
          - Jill
          - 18
+
 ----
 
 Citation
