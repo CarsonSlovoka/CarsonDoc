@@ -7,13 +7,25 @@ Basic Specification
 
 .. sidebar:: Summary
 
-    * :field-name:`Release:` 0.0.1
+    * :field-name:`Release:` 0.1.0
     * :field-name:`Last updated:` 2019/09/05
     * :field-name:`Authors:` |MainAuthor|
-    * :field-name:`Target:` goto ref
+    * :field-name:`Target:` Paragraphs, rename title Hyperlink,
     * :field-name:`Status:` 5
 
 Paragraphs
+--------------
+
+* :field-name:`Part` ==== ====
+* :field-name:`Chapter` `**** ****`
+* :field-name:`Section` ====
+* :field-name:`Subsection` --------
+* :field-name:`Subsubsection` ^^^^
+* :field-name:`Paragraph` """"
+* :field-name:`Paragraph` `****`
+* :field-name:`Paragraph` `''''`
+
+Hyperlink
 --------------
 
 Paragraphs contain text and may contain inline markup.
