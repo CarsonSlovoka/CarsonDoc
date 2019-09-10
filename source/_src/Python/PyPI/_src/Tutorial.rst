@@ -8,10 +8,10 @@ Tutorial
 
 .. sidebar:: Summary
 
-    * :field-name:`Release:` 0.2.0
-    * :field-name:`Last updated:` 2019/09/06
+    * :field-name:`Release:` 0.3.0
+    * :field-name:`Last updated:` 2019/09/10
     * :field-name:`Authors:` |MainAuthor|
-    * :field-name:`Target:` add section number
+    * :field-name:`Target:` add build
     * :field-name:`Status:` 1
 
 ----
@@ -111,11 +111,13 @@ MANIFEST.in
         recursive-include examples *.txt *.py  # all files anywhere under the examples directory matching *.txt or *.py
         recursive-exclude examples *.test
 
-        1 dir  # exclude all files under dir
+        prune dir  # exclude all files under dir
         prune examples/sample?/build  # exclude all directories matching examples/sample?/build.
 
         graft dir  # include all files under dir
+        graft Carson\Class
 
+.. important:: every items of MANIFEST.in are promise able to download, but it doesn't mean that can put those to ``Python\Lib\site-packages`` path.
 
 `Learn more MANIFEST > <https://docs.python.org/2/distutils/sourcedist.html>`_
 
@@ -144,6 +146,13 @@ setup.py
         #   %Python%/Lib/site-packages/{packages_1}/{subItem}
         #   %Python%/Lib/site-packages/{packages_2}/{everything you wan't}
         packages=["{packages_1}/{subItem}", "{packages_2}/{everything you wan't}"],
+        # include_package_data=True,
+        # exclude_package_data={}
+        # package_data={"{packages_path}": ["icons/*"]},  # https://packaging.python.org/guides/distributing-packages-using-setuptools/#manifest-in
+
+        # data files will put those directories at Python root path (same with Scripts, Lib, etc.)
+        data_files=[('Carson/Image/jpg', ['Carson/Image/jpg/5.jpg', 'Carson/Image/jpg/6.jpg']),  # the sub-item directory name must be the same as the root directory name.
+                    ('Carson/Image/png', glob('Carson/Image/png/*.png')),],  # modified by your self
 
 
         license="{MIT}",
@@ -196,7 +205,42 @@ setup.py
         ]
     )
 
+.. important:: you must set `.py` path assign to ``packages`` variable instead of writing at MANIFEST.in otherwise, it will not put those files to ``Python\Lib\site-packages``
+
 ..  tip:: `Learn more > <https://packaging.python.org/guides/distributing-packages-using-setuptools/?highlight=manifest#setup-args>`_
+
+**************
+build
+**************
+
+There are three major `setup.py` commands we will use:
+
+
+\bdist_egg:
+    This creates an egg file. This is what is necessary so someone can use ``esay_install your_project``.
+
+    .. note::
+
+        `easy_install` is old fashioned! I'll suggest you using pip install too instead of it.
+
+        that is because ``pip`` provide more information to tell you what's happening.
+
+\bdist_wininst
+    This will create an ``.exe`` that will install your project on a windows machine.
+
+    That will put "Remove{project}.exe" and "{project}-winiest.log" at the Python directory.
+
+    "{project}-winiest.log" recorded all install information so that when uninstall that can delete all files (include registry values) by reference.
+
+    .. note:: if you want to uninstall, you may use the ``Add or Remove`` programs to do that.
+
+\sdist:
+    This create a raw source distribution which someone can download and run ``python setup.py`` directly.
+
+
+    .. note:: full command: ``python setup.py sdist``
+
+.. tip:: `build Learn more > <https://pythonhosted.org/an_example_pypi_project/setuptools.html>`_
 
 **************
 py2exe
@@ -219,4 +263,6 @@ Reference
 
 * `What's different between distutils and setuptools <https://stackoverflow.com/questions/25337706/setuptools-vs-distutils-why-is-distutils-still-a-thing>`_
 * `Packaging Python Projects <https://packaging.python.org/tutorials/packaging-projects/>`_
+* `Error Code <https://segmentfault.com/a/1190000008663126>`_
+* `bdist_egg, bdist_wininst, sdist <https://pythonhosted.org/an_example_pypi_project/setuptools.html>`_
 
