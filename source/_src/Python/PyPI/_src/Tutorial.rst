@@ -8,10 +8,10 @@ Tutorial
 
 .. sidebar:: Summary
 
-    * :field-name:`Release:` 0.3.0
-    * :field-name:`Last updated:` 2019/09/10
+    * :field-name:`Release:` 0.3.1
+    * :field-name:`Last updated:` 2019/09/12
     * :field-name:`Authors:` |MainAuthor|
-    * :field-name:`Target:` add build
+    * :field-name:`Target:` pip install -r requirements.txt
     * :field-name:`Status:` 1
 
 ----
@@ -76,6 +76,17 @@ Set your directory structure are as follows:
         * README.{rst, md}
 
         .. note:: README file is not necessary to be located here but recommended
+
+        * requirements.txt (Option)
+
+        .. note::
+
+            **list all packages:**
+                * pip list
+                * pip freeze > requirements.txt
+
+            **install packages by requirements.txt:**
+                pip install -r requirements.txt
 
         * LICENSE (Option)
     \directory
