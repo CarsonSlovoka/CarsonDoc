@@ -101,11 +101,15 @@ extensions.append("sphinx_rtd_theme")
 html_theme_path = ["_templates"]  # from {default_path} copy to ./_templates/{html_theme}
 
 if 'Carson':
+
+    html_show_sphinx = False  # {% trans %}Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> {% endtrans %}.
+
     # Add any paths that contain custom static files (such as style sheets) here,
     # relative to this directory. They are copied after the builtin static files,
     # so a file named "default.css" will overwrite the builtin "default.css".
     html_static_path = ['_static']
 
+    # html_additional_pages = {'index': 'language.html'}
 
     def setup(app):
         app.add_stylesheet("css/Carson.css")
