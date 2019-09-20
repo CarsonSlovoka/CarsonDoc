@@ -43,6 +43,7 @@ def show_current_job_at_console(msg, align='center', flag='*', flag_len=60):
 
 
 def run_cmd_command(cmd_list):
+    print(f"run command:  {' '.join(cmd_list)}")
     # job = Popen(cmd_list, stdout=PIPE, stderr=PIPE, stdin=DEVNULL)  # for debug
     job = Popen(cmd_list, stdout=PIPE, stderr=DEVNULL, stdin=DEVNULL)
     result = job.communicate()
@@ -124,7 +125,6 @@ def sphinx_build_html(args):
         cmd_list.extend(['-b', 'html',
                          src_dir, f"{out_dir}/{response_lang}",
                          '-D', f"language={response_lang}"])
-        print(f"run command:  {' '.join(cmd_list)}")
         print(run_cmd_command(cmd_list))
         out_path = path.abspath(f'{out_dir}/{response_lang}')
         startfile(path.join(out_path, 'index.html'))
@@ -205,9 +205,9 @@ if __name__ == '__main__':
     arg_parser.add_argument("--out_dir", help="docs (if you are using GitHub Page, I strongly recommend you use docs.)", dest="out_dir", default='docs')
     arg_parser.add_argument("--locale_dirs", help="locale/  (it must same with variable locale_dirs that from conf.py)", dest="locale_dirs", default='locale/')
     arg_parser.add_argument("--config_file", help="build.ini (if you provide this file, then all of the other settings will be ignored)",
-                            dest="config_file", default=None)
+                            dest="config_file", default='build.ini')
     args = arg_parser.parse_args()
-    if args.config_file:
+    if path.exists(args.config_file):
         config_file = path.abspath(args.config_file)
         assert path.exists(args.config_file), f'{config_file} are not exists!'
         config = configparser.ConfigParser()
@@ -216,4 +216,5 @@ if __name__ == '__main__':
         args.out_dir = config['PATH']['out_dir']
         args.locale_dirs = config['PATH']['locale_dirs']
         args.lang = config['LANGUAGE']['lang']
+        args.__setattr__('ruby_dir', config['PATH']['ruby'])
     main()
