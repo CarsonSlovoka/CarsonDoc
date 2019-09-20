@@ -18,7 +18,7 @@ How to run this script?
 
 from stdafx import show_current_job_at_console  # just like the regular print function but decorated with special text.  (It's not necessary)
 from subprocess import Popen, PIPE, DEVNULL
-from os import scandir, path, startfile
+from os import scandir, path, startfile, remove
 from shutil import rmtree
 import configparser  # https://docs.python.org/3/library/configparser.html
 
@@ -130,6 +130,11 @@ def sphinx_build_html(args):
         startfile(path.join(out_path, 'index.html'))
         if path.exists(path.join(out_path, '_sources')):
             rmtree(path.abspath(f'{out_dir}/{response_lang}/_sources'))
+            print(f'remove _sources file')
+        if path.exists(path.join(out_path, '.doctrees')):  # http://www.sphinx-doc.org/en/master/man/sphinx-build.html#cmdoption-sphinx-build-d
+            # Since Sphinx has to read and parse all source files before it can write an output file, the parsed source files are cached as “doctree pickles”.
+            rmtree(path.abspath(f'{out_dir}/{response_lang}/.doctrees'))
+            print(f'remove unnecessary files: *.doctrees, *.pickle')
         input('Please press any key to continue...')
 
 
@@ -142,6 +147,12 @@ def build_select_language_page(out_dir):
     run_cmd_command(['sass.bat',  # you must give file extension: .bat otherwise, it will cause ambiguous because it has two files sass, sass.bat both with the same name: sass
                      '--style', 'compressed',
                      input_scss_dir, output_css])
+
+    map_file = output_css+'.map'
+    if path.exists(map_file):
+        remove(map_file)
+        print(f'remove unncessary file:{map_file}')
+
     language_html = path.abspath(f'{out_dir}/index.html')
     if path.exists(language_html):
         startfile(language_html)
