@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CarsonDoc \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-29 13:38+0800\n"
+"POT-Creation-Date: 2019-09-20 14:32+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,11 +22,11 @@ msgid "Sphinx"
 msgstr ""
 
 #: ../source/_src/Sphinx/Sphinx.index.rst:9
-msgid ":field-name:`Release:` 0.0.0"
+msgid ":field-name:`Release:` 0.1.0"
 msgstr ""
 
 #: ../source/_src/Sphinx/Sphinx.index.rst:10
-msgid ":field-name:`Last updated:` 2019/08/29"
+msgid ":field-name:`Last updated:` 2019/09/06"
 msgstr ""
 
 #: ../source/_src/Sphinx/Sphinx.index.rst:11
@@ -34,10 +34,43 @@ msgid ":field-name:`Authors:` |MainAuthor|"
 msgstr ""
 
 #: ../source/_src/Sphinx/Sphinx.index.rst:12
-msgid ":field-name:`Target:` Sphinx index init"
+msgid ":field-name:`Target:` Introduction"
 msgstr ""
 
 #: ../source/_src/Sphinx/Sphinx.index.rst:13
 msgid ":field-name:`Status:` 1"
 msgstr ""
+
+#: ../source/_src/Sphinx/Sphinx.index.rst:16
+msgid "Introduction"
+msgstr ""
+
+#: ../source/_src/Sphinx/Sphinx.index.rst:18
+msgid "The reStructuredText (RST) syntax provides an easy-to-read,"
+msgstr ""
+
+#: ../source/_src/Sphinx/Sphinx.index.rst:20
+msgid "what-you-see-is-what-you-get plaintext markup syntax and parser system."
+msgstr ""
+
+#: ../source/_src/Sphinx/Sphinx.index.rst:22
+msgid "However, you need to be very precise and stick to some strict rules:"
+msgstr ""
+
+#: ../source/_src/Sphinx/Sphinx.index.rst:24
+msgid "like Python, RST syntax is sensitive to indentation!"
+msgstr ""
+
+#: ../source/_src/Sphinx/Sphinx.index.rst:26
+msgid "RST requires blank lines between paragraphs."
+msgstr ""
+
+#~ msgid ":field-name:`Release:` 0.0.0"
+#~ msgstr ""
+
+#~ msgid ":field-name:`Last updated:` 2019/08/29"
+#~ msgstr ""
+
+#~ msgid ":field-name:`Target:` Sphinx index init"
+#~ msgstr ""
 
