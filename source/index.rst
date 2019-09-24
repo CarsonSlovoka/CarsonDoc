@@ -54,6 +54,12 @@ Article
 
 ----
 
+.. toctree::
+   :maxdepth: 3
+
+   _src/Windows/windows.index.rst
+
+
 Indices and tables
 ==================
 
