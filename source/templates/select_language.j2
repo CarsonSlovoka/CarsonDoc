@@ -2,6 +2,15 @@
 <html>
 
 <head>
+    {% if analytics_id %}
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{analytics_id}}"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '{{analytics_id}}');
+        </script>
+    {% endif %}
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<style>
@@ -19,9 +28,11 @@
 
 	<select name="form" onchange="location = this.value;">
 		<!-- <option selected="selected" disabled="disabled">-- Select a language --</option> -->
-		<option value="hide">－－Language－－</option>		
-		<option value="en/index.html">en</option>
-		<option value="zh_TW/index.html">zh-TW (繁體中文)</option>
+        <option value="hide">－－Language－－</option>
+
+		{% for lang_dir, value in dict_language.items() %}
+			<option value="{{lang_dir}}/index.html">{{value}}</option>
+		{% endfor %}
 	</select>
 </body>
 

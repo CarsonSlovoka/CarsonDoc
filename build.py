@@ -21,6 +21,8 @@ from subprocess import Popen, PIPE, DEVNULL
 from os import scandir, path, startfile, remove
 from shutil import rmtree
 import configparser  # https://docs.python.org/3/library/configparser.html
+from jinja2 import Environment, PackageLoader
+import warnings
 
 
 def show_job(job_desc, align='center', flag='*', flag_len=60):
@@ -59,7 +61,7 @@ def get_text(src_dir, out_dir):
 
 
 @show_job('available language list:', align='left', flag='-', flag_len=30)
-def show_language_list(src_dir, local_dirs):
+def show_language_list(src_dir, local_dirs, pause_flag=True):
     locale_dirs = path.abspath(path.join(src_dir, local_dirs))
     if not path.exists(locale_dirs):
         print(f'File Not Found Error: {locale_dirs}')
@@ -70,7 +72,8 @@ def show_language_list(src_dir, local_dirs):
         lang = path.basename(cur_dir_path)
         print(lang)
         language_list.append(lang)
-    input('\nPlease press any key to continue...')
+    if pause_flag:
+        input('\nPlease press any key to continue...')
     return language_list
 
 
@@ -139,7 +142,13 @@ def sphinx_build_html(args):
 
 
 @show_job('create home index page')
-def build_select_language_page(out_dir):
+def build_select_language_page(out_dir, ruby_dir):
+    sass_bat_path = path.abspath(path.join(ruby_dir, 'sass.bat'))
+    if not path.exists(sass_bat_path):
+        warnings.warn(f'sass.bat are not exists. {sass_bat_path}', stacklevel=2)
+        print(r'Please install ruby: https://rubyinstaller.org/downloads/  and set ruby. for example ruby: C:\Ruby25-x64\bin')
+        return
+
     abspath = path.abspath
     input_scss_dir = abspath('_build/select_language.scss')
     output_css = abspath(out_dir + '/select_language.css')
@@ -158,6 +167,26 @@ def build_select_language_page(out_dir):
         startfile(language_html)
 
 
+@show_job('build_user_define_html')
+def build_user_define_html(in_args, options):
+    src_dir, out_dir, local_dir = in_args.src_dir, in_args.out_dir, in_args.locale_dirs
+    env = Environment(loader=PackageLoader(src_dir))  # __init__ must exists in "src_dir"
+    template = env.get_template('select_language.j2')  # this file be wrap at "templates". i.e. {src_dir}/templates/select_language.j2
+    list_language = show_language_list(src_dir, local_dir, pause_flag=False)
+    dict_language = dict()
+    for lang in list_language:
+        value = lang.replace('_', '-')
+        if value == 'zh-TW':
+            value += ' (繁體中文)'
+        dict_language[lang] = value
+
+    content = template.render(dict_language=dict_language, analytics_id=options.get('analytics_id'))
+    out_file = path.join(out_dir, 'index.html')
+    with open(out_file, 'w', encoding='utf-8') as f:
+        f.write(content)
+    startfile(out_file)
+
+
 def main():
     global args
     if show_current_job_at_console('your config:'):
@@ -170,7 +199,8 @@ def main():
         2: (show_language_list.__name__, lambda: show_language_list(args.src_dir, args.locale_dirs)),
         3: (get_po_file.__name__, lambda: get_po_file(path.abspath(path.join(args.src_dir, args.locale_dirs)), args.lang)),
         4: (sphinx_build_html.__name__, lambda: sphinx_build_html(args)),
-        10: (build_select_language_page.__name__, lambda: build_select_language_page(args.out_dir)),
+        10: (build_select_language_page.__name__, lambda: build_select_language_page(args.out_dir, args.ruby_dir)),  # css
+        11: (build_user_define_html.__name__, lambda: build_user_define_html(args, args.options)),
         99: (run_all_process.__name__, lambda: run_all_process(args)),  # this command (that run all procedure) usually used for the first building
     }
     while 1:
@@ -193,6 +223,8 @@ def run_all_process(args):
     get_text(args.src_dir, args.out_dir)
     get_po_file(args.out_dir, args.lang)
     sphinx_build_html(args)
+    build_select_language_page(args.out_dir, args.ruby_dir)
+    build_user_define_html(args, args.options)
 
 
 if __name__ == '__main__':
@@ -207,6 +239,8 @@ if __name__ == '__main__':
     arg_parser.add_argument("--config_file", help="build.ini (if you provide this file, then all of the other settings will be ignored)",
                             dest="config_file", default='build.ini')
     args = arg_parser.parse_args()
+    args.__setattr__('ruby_dir', None)
+    args.__setattr__('options', dict())
     if path.exists(args.config_file):
         config_file = path.abspath(args.config_file)
         assert path.exists(args.config_file), f'{config_file} are not exists!'
@@ -216,5 +250,9 @@ if __name__ == '__main__':
         args.out_dir = config['PATH']['out_dir']
         args.locale_dirs = config['PATH']['locale_dirs']
         args.lang = config['LANGUAGE']['lang']
-        args.__setattr__('ruby_dir', config['PATH']['ruby'])
+
+        args.ruby_dir = config['PATH'].get('ruby')
+        if len(config.items('OPTIONS')):
+            for key, value in config.items('OPTIONS'):
+                args.options[key] = value
     main()

@@ -17,3 +17,5 @@ _gettext/
 
 # .mo is compiled from "sphinx-build -b html source docs/zh-tw  -D language=zh_TW"
 *.mo
+
+__pycache__
