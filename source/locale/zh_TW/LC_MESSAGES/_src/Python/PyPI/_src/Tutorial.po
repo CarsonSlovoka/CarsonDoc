@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CarsonDoc \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-05 17:01+0800\n"
+"POT-Creation-Date: 2019-09-20 14:32+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,172 +17,407 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:6
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:7
 msgid "Tutorial"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:10
-msgid ":field-name:`Release:` 0.0.0"
-msgstr ""
-
 #: ../source/_src/Python/PyPI/_src/Tutorial.rst:11
-msgid ":field-name:`Last updated:` 2019/09/05"
+msgid ":field-name:`Release:` 0.3.1"
 msgstr ""
 
 #: ../source/_src/Python/PyPI/_src/Tutorial.rst:12
-msgid ":field-name:`Authors:` |MainAuthor|"
+msgid ":field-name:`Last updated:` 2019/09/12"
 msgstr ""
 
 #: ../source/_src/Python/PyPI/_src/Tutorial.rst:13
-msgid ":field-name:`Target:` publish to PyPI"
+msgid ":field-name:`Authors:` |MainAuthor|"
 msgstr ""
 
 #: ../source/_src/Python/PyPI/_src/Tutorial.rst:14
+msgid ":field-name:`Target:` pip install -r requirements.txt"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:15
 msgid ":field-name:`Status:` 1"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:19
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:23
 msgid "How to Pronounce?"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:21
-msgid "PyPy is pronounced \"pie pie\","
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:25
+msgid "PyPy is pronounced ``pie pie``,"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:23
-msgid "PyPI is pronounced \"pie pee eye\" or \"the cheeseshop\"."
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:27
+msgid "PyPI is pronounced ``pie pee eye`` or ``the cheeseshop``."
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:26
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:31
+msgid "Publish To PyPI"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:34
 msgid "Create Account"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:28
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:36
 msgid ""
 "If you don't have an account yet, go to the `official website "
 "<https://pypi.org/>`_ to register an account:"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:31
-msgid "Settings"
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:39
+msgid "Settings (account, password)"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:33
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:41
 msgid "**load account and password from config**"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:35
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:43
 msgid "create ``.pypirc`` file at ``%USERPROFILE%/.pypirc``"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:37
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:45
 msgid "**file contents**::"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:56
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:64
 msgid "that will publish to two websites (pypi and pypitest) at the same time."
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:58
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:66
 msgid "just remove if you won't need someone"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:61
-msgid "Prepare setup.py"
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:69
+msgid "Prepare Data"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:63
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:71
 msgid "Set your directory structure are as follows:"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:65
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:90
+msgid "\\file"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:74
 msgid ".setup.py [#note-setup.py]_"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:66
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:75
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:106
+msgid "MANIFEST.in"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:76
 msgid "README.{rst, md}"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:67
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:78
 msgid "README file is not necessary to be located here but recommended"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:68
-msgid "{packages_1}/{subItem}/{file.py}"
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:80
+msgid "requirements.txt (Option)"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:70
-msgid "{packages_2}/{everything you wan't}/{file2.py}"
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:86
+msgid "**list all packages:**"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:70
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:85
+msgid "pip list"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:86
+msgid "pip freeze > requirements.txt"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:88
+msgid "**install packages by requirements.txt:**"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:89
+msgid "pip install -r requirements.txt"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:91
+msgid "LICENSE (Option)"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:95
+msgid "\\directory"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:93
+msgid "{packages} [#note-packages]_"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:95
 msgid "name of \"packages\" is an example, not necessary named to same."
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:72
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:97
 msgid ""
 "Remember! These are all related to the contents of the ``setup.py`` "
 "[#note-setup.py]_ file."
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:74
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:99
 msgid ""
 "name of \"setup.py\" is not necessary named to so, but this has been used"
 " or accepted in the society."
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:77
-msgid "**setup.py contents:**"
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:100
+msgid ""
+"After you `pip install {project}` finished that will also install those "
+"files that is what you append anything of files or directory in packages "
+"directory."
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:154
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:103
+msgid "Write contents"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:112
+msgid "\\Manifest-related options:"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:109
+msgid ""
+"if the manifest file (MANIFEST by default) exists and the first line does"
+" not have a comment indicating it is generated from MANIFEST.in, then it "
+"is used as is, unaltered"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:110
+msgid ""
+"``if the manifest file doesn’t exist or has been previously automatically"
+" generated, read MANIFEST.in data to create the manifest``"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:111
+msgid ""
+"if neither MANIFEST nor MANIFEST.in exist, create a manifest with just "
+"the default file set"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:112
+msgid ""
+"use the list of files now in MANIFEST (either just generated or read in) "
+"to create the source distribution archive(s)"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:129
+msgid "\\contents:"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:131
+msgid ""
+"every items of MANIFEST.in are promise able to download, but it doesn't "
+"mean that can put those to ``Python\\Lib\\site-packages`` path."
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:133
+msgid ""
+"`Learn more MANIFEST > "
+"<https://docs.python.org/2/distutils/sourcedist.html>`_"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:136
+msgid "setup.py"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:219
+msgid ""
+"you must set `.py` path assign to ``packages`` variable instead of "
+"writing at MANIFEST.in otherwise, it will not put those files to "
+"``Python\\Lib\\site-packages``"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:221
+msgid ""
+"`Learn more > <https://packaging.python.org/guides/distributing-packages-"
+"using-setuptools/?highlight=manifest#setup-args>`_"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:225
+msgid "build"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:227
+msgid "There are three major `setup.py` commands we will use:"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:237
+msgid "\\bdist_egg:"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:231
+msgid ""
+"This creates an egg file. This is what is necessary so someone can use "
+"``esay_install your_project``."
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:235
+msgid ""
+"`easy_install` is old fashioned! I'll suggest you using pip install too "
+"instead of it."
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:237
+msgid ""
+"that is because ``pip`` provide more information to tell you what's "
+"happening."
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:246
+msgid "\\bdist_wininst"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:240
+msgid ""
+"This will create an ``.exe`` that will install your project on a windows "
+"machine."
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:242
+msgid ""
+"That will put \"Remove{project}.exe\" and \"{project}-winiest.log\" at "
+"the Python directory."
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:244
+msgid ""
+"\"{project}-winiest.log\" recorded all install information so that when "
+"uninstall that can delete all files (include registry values) by "
+"reference."
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:246
+msgid ""
+"if you want to uninstall, you may use the ``Add or Remove`` programs to "
+"do that."
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:252
+msgid "\\sdist:"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:249
+msgid ""
+"This create a raw source distribution which someone can download and run "
+"``python setup.py`` directly."
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:252
+msgid "full command: ``python setup.py sdist``"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:254
+msgid ""
+"`build Learn more > "
+"<https://pythonhosted.org/an_example_pypi_project/setuptools.html>`_"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:258
 msgid "py2exe"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:156
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:260
 msgid "pyInstaller - Cross-platform"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:157
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:261
 msgid "cx_Freeze - Cross-platform"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:158
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:262
 msgid "constructor - For command-line installers"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:159
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:263
 msgid "py2exe - Windows only"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:160
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:264
 msgid "py2app - Mac only"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:161
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:265
 msgid "bbFreeze - Windows, Linux, Python 2 only"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:162
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:266
 msgid "osnap - Windows and Mac"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:163
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:267
 msgid "pynsist - Windows only"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:165
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:269
 msgid "`See more > <https://packaging.python.org/overview/>`_"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:168
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:273
 msgid "Reference"
 msgstr ""
 
-#: ../source/_src/Python/PyPI/_src/Tutorial.rst:170
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:275
 msgid ""
 "`What's different between distutils and setuptools "
 "<https://stackoverflow.com/questions/25337706/setuptools-vs-distutils-"
 "why-is-distutils-still-a-thing>`_"
 msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:276
+msgid ""
+"`Packaging Python Projects <https://packaging.python.org/tutorials"
+"/packaging-projects/>`_"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:277
+msgid "`Error Code <https://segmentfault.com/a/1190000008663126>`_"
+msgstr ""
+
+#: ../source/_src/Python/PyPI/_src/Tutorial.rst:278
+msgid ""
+"`bdist_egg, bdist_wininst, sdist "
+"<https://pythonhosted.org/an_example_pypi_project/setuptools.html>`_"
+msgstr ""
+
+#~ msgid ":field-name:`Release:` 0.0.0"
+#~ msgstr ""
+
+#~ msgid ":field-name:`Last updated:` 2019/09/05"
+#~ msgstr ""
+
+#~ msgid ":field-name:`Target:` publish to PyPI"
+#~ msgstr ""
+
+#~ msgid "PyPy is pronounced \"pie pie\","
+#~ msgstr ""
+
+#~ msgid "PyPI is pronounced \"pie pee eye\" or \"the cheeseshop\"."
+#~ msgstr ""
+
+#~ msgid "Settings"
+#~ msgstr ""
+
+#~ msgid "Prepare setup.py"
+#~ msgstr ""
+
+#~ msgid "{packages_1}/{subItem}/{file.py}"
+#~ msgstr ""
+
+#~ msgid "{packages_2}/{everything you wan't}/{file2.py}"
+#~ msgstr ""
+
+#~ msgid "**setup.py contents:**"
+#~ msgstr ""
 
