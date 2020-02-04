@@ -261,8 +261,8 @@ tradition
             | Y                           |           |         |
             +-----------------------------+-----------+---------+
 
-CSV TABLE
-````````````
+`CSV TABLE <http://docutils.sourceforge.net/docs/ref/rst/directives.html#list-table>`_
+````````````````````````````````````````````````````````````````````````````````````````````
 
 .. csv-table:: Employee
    :header: "ID", "Name", "Age"
