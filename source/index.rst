@@ -59,6 +59,13 @@ Article
 
    _src/Windows/windows.index.rst
 
+----
+
+.. toctree::
+   :maxdepth: 3
+
+   _src/ElasticStack/ElasticStack.index.rst
+
 
 Indices and tables
 ==================
