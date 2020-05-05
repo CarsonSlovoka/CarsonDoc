@@ -1,4 +1,4 @@
-.. _linking-Sass_SCSS.Install:
+  .. _linking-Sass_SCSS.Install:
 
 
 Install
@@ -19,20 +19,48 @@ guideline
 
 There are two ways to compile scss/sass file.
 
-1. node js: npm
-#. ruby: gem
+1. node js: npm  (scss)
+#. ruby: gem  (sass)
+
+SASS V.S. SCSS
+^^^^^^^^^^^^^^^^
+
+Sass is older to Scss. In terms of structure, the two are similar,
+
+the only difference is the grammatical structure.
+
+Sass belongs to the **indented structure**,  similar to HTML,
+
+indentation is used to represent the parent relationship of the children,
+
+without the semicolon at the end, and the file extension is sass.
+
+Scss is like CSS, which belongs to a nested structure.
+
+It uses **braces** to enclose the child elements. The element needs a semicolon at the end,
+
+and the file extension is Scss.
+
+**It recommended using the SCSS.**
 
 node js
 ^^^^^^^^^^
 
 1. download `node.js <https://nodejs.org/en/>`_ [#note-green]_
 
+    check version: ``note --version``
+
 #. after you finished, run command: ``npm --version`` to check install success
 
     .. note:: 勾選自動安裝Chocolatey
     .. note:: nodejs will install at: ``%ProgramFiles%/nodejs`` which contains {npm, npx, node}
 
-#. npm install -g scss-compile
+#. Installing Sass/Scss
+
+    - npm install -g scss
+    - npm install -g scss-compile
+
+    .. note:: ``npm install -g`` = ``npm install --global``
 
 /Usage:
     you can run it from any directory. Just run: ``npm run scss-compile``
