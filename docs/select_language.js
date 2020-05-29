@@ -1,5 +1,7 @@
 /*
-Reference: http://jsfiddle.net/BB3JK/47/
+Reference:
+    - http://jsfiddle.net/BB3JK/47/
+    - https://codepen.io/wallaceerick/pen/ctsCz
 */
 
 $('select').each(function(){ // find all node of "select"
